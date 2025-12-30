@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORDRE NATIONAL - La competence au pouvoir</title>
-    <meta name="description" content="Mouvement politique pour une Republique Meritocratique. Patriotisme, Laicite, Humanisme.">
+    <title>ORDRE NATIONAL - La compétence au pouvoir</title>
+    <meta name="description" content="ORDRE NATIONAL - Le Modèle 165 : 165 experts décident, 28 jours pour une loi, 1 milliard d'économies par an. La compétence au pouvoir pour une France qui fonctionne.">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Styles specifiques pour l'accueil */
         .hex-col { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
         .mini-card { padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         .stat-mini { text-align: center; padding: 0.75rem; }
         .stat-mini .num { font-size: 1.8rem; font-weight: 700; line-height: 1; }
         .stat-mini .label { font-size: 0.7rem; opacity: 0.7; margin-top: 0.25rem; }
+        @media (max-width: 768px) {
+            .hex-col { grid-template-columns: repeat(3, 1fr); }
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation Full Width -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="navbar-container">
             <a href="index.html" class="navbar-brand">
@@ -39,40 +41,51 @@
         </div>
     </nav>
 
+    <!-- Bandeau VOTE -->
+    <div style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); padding: 1rem; text-align: center; margin-top: 70px;">
+        <p style="color: #000; font-size: 1.1rem; margin-bottom: 0.5rem;">
+            <strong>&#9733; VOTE DEMAIN &#9733; Election presidentielle sur Identite National - Vote Sitix pour le Modele 165</strong>
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://discord.gg/Vb2TavAf9q" target="_blank" class="btn" style="background: #5865F2; color: white; padding: 0.5rem 1.5rem; border-radius: 8px; text-decoration: none;">Rejoindre Identite National</a>
+            <a href="https://discord.gg/SRv2X39rUF" target="_blank" class="btn" style="background: #2c3e50; color: white; padding: 0.5rem 1.5rem; border-radius: 8px; text-decoration: none;">Rejoindre Hemicycle</a>
+        </div>
+    </div>
+
     <!-- Hero Banner -->
-    <header class="banner banner-large" style="position: relative; min-height: 300px; display: flex; align-items: center; margin-top: 70px;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(30,58,95,0.95) 0%, rgba(196,30,58,0.9) 100%); z-index: 1;"></div>
+    <header class="banner banner-large" style="position: relative; min-height: 350px; display: flex; align-items: center;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(30,58,95,0.97) 0%, rgba(196,30,58,0.92) 100%); z-index: 1;"></div>
         <div class="container" style="position: relative; z-index: 2;">
-            <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
-                <div style="font-size: 5rem;">&#127467;&#127479;</div>
-                <div>
-                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <span class="badge" style="background: rgba(255,255,255,0.2); color: white;">MOUVEMENT POLITIQUE</span>
-                        <span class="badge" style="background: rgba(255,255,255,0.2); color: white;">MERITOCRATIQUE</span>
-                    </div>
-                    <h1 style="color: white; margin: 0; font-size: 2.5rem;">ORDRE NATIONAL</h1>
-                    <p style="font-size: 1.5rem; opacity: 0.9; margin-top: 0.5rem; color: white;">Patriotisme + Laicisme + Humanisme</p>
-                    <p style="font-size: 1.2rem; opacity: 0.8; font-style: italic; color: white; margin-top: 0.5rem;">"La competence au pouvoir."</p>
-                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="pages/systeme.html" class="btn btn-secondary">Notre Systeme</a>
-                        <a href="pages/programme/index.html" class="btn" style="background: rgba(255,255,255,0.2); color: white;">Programme</a>
-                        <a href="pages/constitution.html" class="btn" style="background: rgba(255,255,255,0.15); color: white;">Constitution</a>
-                    </div>
+            <div style="max-width: 800px;">
+                <h1 style="color: white; margin: 0; font-size: 2.8rem; line-height: 1.2;">
+                    La compétence au pouvoir.
+                </h1>
+                <p style="font-size: 1.4rem; color: rgba(255,255,255,0.95); margin-top: 1.5rem; line-height: 1.5;">
+                    <strong>Le Modèle 165 : 165 experts décident. 28 jours pour une loi. 98.9% d'économies.</strong><br>
+                    Un gouvernement qui fonctionne, pas une bureaucratie qui s'enlise.
+                </p>
+                <p style="font-size: 1.1rem; color: rgba(255,255,255,0.85); margin-top: 1rem;">
+                    12 domaines d'action. 123 experts décisionnels. Des KPIs publics chaque mois.
+                </p>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="pages/programme/index.html" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1rem 2rem;">Voir le programme</a>
+                    <a href="pages/systeme.html" class="btn" style="background: rgba(255,255,255,0.2); color: white; font-size: 1.1rem; padding: 1rem 2rem;">Comment ça marche</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Barre de stats -->
-    <section style="background: var(--bg-dark); color: white; padding: 1.25rem 0;">
+    <!-- Barre de stats - Le Modèle 165 -->
+    <section style="background: #1a1a2e; color: white; padding: 1.5rem 0;">
         <div class="container">
+            <p style="text-align: center; margin-bottom: 1rem; font-size: 0.9rem; opacity: 0.8;">LE MODÈLE 165 — Gouvernance optimisée</p>
             <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem;">
-                <div class="stat-mini"><div class="num" style="color: var(--humanisme);">12</div><div class="label">Domaines</div></div>
-                <div class="stat-mini"><div class="num" style="color: #4CAF50;">10</div><div class="label">Conseils</div></div>
-                <div class="stat-mini"><div class="num" style="color: #2196F3;">400</div><div class="label">Experts</div></div>
-                <div class="stat-mini"><div class="num" style="color: #FF9800;">38Mds</div><div class="label">Budget</div></div>
-                <div class="stat-mini"><div class="num" style="color: #00BCD4;">577</div><div class="label">Deputes</div></div>
-                <div class="stat-mini"><div class="num" style="color: var(--humanisme); font-weight: 800;">8</div><div class="label">Fondateurs</div></div>
+                <div class="stat-mini"><div class="num" style="color: #4CAF50;">165</div><div class="label">Décideurs (vs 14,000)</div></div>
+                <div class="stat-mini"><div class="num" style="color: #4CAF50;">28j</div><div class="label">Pour une loi (vs 6 mois)</div></div>
+                <div class="stat-mini"><div class="num" style="color: #4CAF50;">-98.9%</div><div class="label">Coût gouvernance</div></div>
+                <div class="stat-mini"><div class="num" style="color: #4CAF50;">1 Md€</div><div class="label">Économies/an</div></div>
+                <div class="stat-mini"><div class="num" style="color: #4CAF50;">100%</div><div class="label">KPIs publics</div></div>
+                <div class="stat-mini"><div class="num" style="color: #4CAF50;">0</div><div class="label">Corruption tolérée</div></div>
             </div>
         </div>
     </section>
@@ -80,184 +93,175 @@
     <!-- Section principale -->
     <main class="section">
         <div class="container">
-                    <!-- Les 3 Valeurs - 3 colonnes -->
-                    <div style="margin-bottom: 3rem;">
-                        <h2 style="text-align: center; margin-bottom: 2rem;">Les 3 Valeurs Fondamentales</h2>
-                        <div class="grid-3" style="gap: 2rem;">
-                            <!-- Patriotisme -->
-                            <div class="card" style="border-top: 5px solid var(--patriotisme); background: linear-gradient(180deg, #e8f0f8 0%, white 30%);">
-                                <div class="card-body" style="text-align: center; padding: 2rem;">
-                                    <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: var(--patriotisme); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);">&#127467;&#127479;</div>
-                                    <h3 style="color: var(--patriotisme); font-size: 1.3rem; margin-bottom: 0.5rem;">PATRIOTISME</h3>
-                                    <p style="font-size: 1rem; font-weight: 600; color: var(--patriotisme); margin-bottom: 1rem;">"Donne-lui les meilleurs"</p>
-                                    <p style="font-size: 0.9rem; line-height: 1.5;">Nationalisme civique. Peu importe d'ou tu viens, si tu es competent et loyal envers la France, tu as ta place.</p>
-                                </div>
-                            </div>
 
-                            <!-- Laicisme -->
-                            <div class="card" style="border-top: 5px solid #6c757d; background: linear-gradient(180deg, #f5f5f5 0%, white 30%);">
-                                <div class="card-body" style="text-align: center; padding: 2rem;">
-                                    <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: #6c757d; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; color: white; box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);">&#9878;</div>
-                                    <h3 style="color: #6c757d; font-size: 1.3rem; margin-bottom: 0.5rem;">LAICISME</h3>
-                                    <p style="font-size: 1rem; font-weight: 600; color: #6c757d; margin-bottom: 1rem;">"Contre TOUS les dogmes"</p>
-                                    <p style="font-size: 0.9rem; line-height: 1.5;">Laicite ideologique. On decide selon ce qu'on sait, pas ce qu'on croit. Raison et expertise avant tout.</p>
-                                </div>
-                            </div>
-
-                            <!-- Humanisme -->
-                            <div class="card" style="border-top: 5px solid var(--humanisme); background: linear-gradient(180deg, #fef0f0 0%, white 30%);">
-                                <div class="card-body" style="text-align: center; padding: 2rem;">
-                                    <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: var(--humanisme); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);">&#128101;</div>
-                                    <h3 style="color: var(--humanisme); font-size: 1.3rem; margin-bottom: 0.5rem;">HUMANISME</h3>
-                                    <p style="font-size: 1rem; font-weight: 600; color: var(--humanisme); margin-bottom: 1rem;">"Au service de TOUS"</p>
-                                    <p style="font-size: 0.9rem; line-height: 1.5;">Gouvernance efficace et bienveillante. L'objectif final : que chaque Francais vive mieux.</p>
-                                </div>
-                            </div>
+            <!-- Les 3 Valeurs Fondamentales -->
+            <div style="margin-bottom: 4rem;">
+                <h2 style="text-align: center; margin-bottom: 0.5rem;">Trois valeurs. Une vision.</h2>
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem;">
+                    Des Français compétents qui décident par la raison pour le bien de tous.
+                </p>
+                <div class="grid-3" style="gap: 2rem;">
+                    <!-- Patriotisme -->
+                    <div class="card" style="border-top: 5px solid var(--patriotisme); background: linear-gradient(180deg, #e8f0f8 0%, white 30%);">
+                        <div class="card-body" style="text-align: center; padding: 2rem;">
+                            <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: var(--patriotisme); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);">&#127467;&#127479;</div>
+                            <h3 style="color: var(--patriotisme); font-size: 1.3rem; margin-bottom: 0.5rem;">PATRIOTISME</h3>
+                            <p style="font-size: 1.1rem; font-weight: 600; color: var(--patriotisme); margin-bottom: 1rem;">"Les meilleurs pour la France"</p>
+                            <p style="font-size: 0.95rem; line-height: 1.6;">Aimer la France, c'est vouloir qu'elle fonctionne. Nationalisme civique : peu importe d'où tu viens, si tu es compétent et loyal, tu as ta place.</p>
                         </div>
                     </div>
 
-                    <!-- Constat + Solution cote a cote -->
-                    <div class="grid-2" style="gap: 2rem; margin-bottom: 3rem;">
-                        <!-- Constat -->
-                        <div>
-                            <span class="badge badge-humanisme" style="margin-bottom: 1rem;">CONSTAT</span>
-                            <h3>40 ans de declin</h3>
-                            <p style="margin-bottom: 1rem;">Sous TOUS les gouvernements - gauche, droite, centre.</p>
-                            <div class="hex-col" style="gap: 0.75rem;">
-                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">-20pts</div><div style="font-size: 0.75rem;">PISA</div></div>
-                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">+15%</div><div style="font-size: 0.75rem;">Crimes</div></div>
-                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">110%</div><div style="font-size: 0.75rem;">Dette/PIB</div></div>
-                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">-40%</div><div style="font-size: 0.75rem;">Industrie</div></div>
-                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">1.68</div><div style="font-size: 0.75rem;">Natalite</div></div>
-                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">23%</div><div style="font-size: 0.75rem;">Confiance</div></div>
-                            </div>
-                            <div class="card" style="background: var(--patriotisme); color: white; margin-top: 1.5rem;">
-                                <div class="card-body" style="padding: 1rem;">
-                                    <strong>Diagnostic :</strong> On elit des gens populaires au lieu de gens competents.
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Solution -->
-                        <div>
-                            <span class="badge badge-success" style="margin-bottom: 1rem;">SOLUTION</span>
-                            <h3>Republique Meritocratique</h3>
-                            <p style="margin-bottom: 1rem;">Legitimite democratique + Expertise technique.</p>
-                            <div class="hex-col" style="gap: 0.75rem;">
-                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">10</div><div style="font-size: 0.75rem;">Conseils</div></div>
-                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">400</div><div style="font-size: 0.75rem;">Experts</div></div>
-                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">KPIs</div><div style="font-size: 0.75rem;">Mesures</div></div>
-                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">30j</div><div style="font-size: 0.75rem;">Examen</div></div>
-                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">577</div><div style="font-size: 0.75rem;">Deputes</div></div>
-                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">Vote</div><div style="font-size: 0.75rem;">Final</div></div>
-                            </div>
-                            <div class="card" style="background: #4CAF50; color: white; margin-top: 1.5rem;">
-                                <div class="card-body" style="padding: 1rem;">
-                                    <strong>Resultat :</strong> Competence + Legitimite = Efficacite
-                                </div>
-                            </div>
+                    <!-- Laïcisme -->
+                    <div class="card" style="border-top: 5px solid #6c757d; background: linear-gradient(180deg, #f5f5f5 0%, white 30%);">
+                        <div class="card-body" style="text-align: center; padding: 2rem;">
+                            <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: #6c757d; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; color: white; box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);">&#9878;</div>
+                            <h3 style="color: #6c757d; font-size: 1.3rem; margin-bottom: 0.5rem;">LAÏCISME</h3>
+                            <p style="font-size: 1.1rem; font-weight: 600; color: #6c757d; margin-bottom: 1rem;">"La raison contre les dogmes"</p>
+                            <p style="font-size: 0.95rem; line-height: 1.6;">On gouverne par les faits, pas par les croyances. Ni dogme religieux, ni dogme idéologique. Mesurer, évaluer, corriger.</p>
                         </div>
                     </div>
 
-                    <!-- 10 Conseils Sectoriels -->
-                    <div style="margin-bottom: 3rem;">
-                        <h2 style="text-align: center; margin-bottom: 1.5rem;">Les 10 Conseils Sectoriels</h2>
-                        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-muted);">40 experts par conseil = 400 experts valident chaque loi</p>
-                        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem;">
-                            <div class="mini-card text-center">
-                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#128737;</div>
-                                <strong style="font-size: 0.9rem;">Securite</strong>
-                            </div>
-                            <div class="mini-card text-center">
-                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #27ae60; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#128176;</div>
-                                <strong style="font-size: 0.9rem;">Economie</strong>
-                            </div>
-                            <div class="mini-card text-center">
-                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #e74c3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127973;</div>
-                                <strong style="font-size: 0.9rem;">Sante</strong>
-                            </div>
-                            <div class="mini-card text-center">
-                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127891;</div>
-                                <strong style="font-size: 0.9rem;">Education</strong>
-                            </div>
-                            <div class="mini-card text-center">
-                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #9b59b6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127961;</div>
-                                <strong style="font-size: 0.9rem;">Urbanisme</strong>
-                            </div>
-                            <div class="mini-card text-center">
-                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #16a085; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127807;</div>
-                                <strong style="font-size: 0.9rem;">Environnement</strong>
-                            </div>
-                            <div class="mini-card text-center">
-                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #f39c12; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127806;</div>
-                                <strong style="font-size: 0.9rem;">Agriculture</strong>
-                            </div>
-                            <div class="mini-card text-center">
-                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #1abc9c; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#128187;</div>
-                                <strong style="font-size: 0.9rem;">Numerique</strong>
-                            </div>
-                            <div class="mini-card text-center">
-                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #e67e22; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127908;</div>
-                                <strong style="font-size: 0.9rem;">Culture</strong>
-                            </div>
-                            <div class="mini-card text-center">
-                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #34495e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127760;</div>
-                                <strong style="font-size: 0.9rem;">Etrangeres</strong>
-                            </div>
+                    <!-- Humanisme -->
+                    <div class="card" style="border-top: 5px solid var(--humanisme); background: linear-gradient(180deg, #fef0f0 0%, white 30%);">
+                        <div class="card-body" style="text-align: center; padding: 2rem;">
+                            <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: var(--humanisme); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);">&#128101;</div>
+                            <h3 style="color: var(--humanisme); font-size: 1.3rem; margin-bottom: 0.5rem;">HUMANISME</h3>
+                            <p style="font-size: 1.1rem; font-weight: 600; color: var(--humanisme); margin-bottom: 1rem;">"Au service de TOUS"</p>
+                            <p style="font-size: 0.95rem; line-height: 1.6;">La compétence au service de chaque Français. Pas juste l'élite parisienne. Résultats concrets, mesurables, pour tous.</p>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- 12 Domaines Programme -->
-                    <div style="margin-bottom: 3rem;">
-                        <h2 style="text-align: center; margin-bottom: 1.5rem;">12 Domaines de Programme</h2>
-                        <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.75rem;">
-                            <a href="pages/programme/securite.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128737;</div><strong style="font-size: 0.8rem;">Sécurité</strong></a>
-                            <a href="pages/programme/justice.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#9878;</div><strong style="font-size: 0.8rem;">Justice</strong></a>
-                            <a href="pages/programme/immigration.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128274;</div><strong style="font-size: 0.8rem;">Immigration</strong></a>
-                            <a href="pages/programme/economie.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128176;</div><strong style="font-size: 0.8rem;">Économie</strong></a>
-                            <a href="pages/programme/sante.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127973;</div><strong style="font-size: 0.8rem;">Santé</strong></a>
-                            <a href="pages/programme/education.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127891;</div><strong style="font-size: 0.8rem;">Éducation</strong></a>
-                            <a href="pages/programme/logement.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127968;</div><strong style="font-size: 0.8rem;">Logement</strong></a>
-                            <a href="pages/programme/transports.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128646;</div><strong style="font-size: 0.8rem;">Transports</strong></a>
-                            <a href="pages/programme/services-publics.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127970;</div><strong style="font-size: 0.8rem;">Services</strong></a>
-                            <a href="pages/programme/ecologie.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127807;</div><strong style="font-size: 0.8rem;">Écologie</strong></a>
-                            <a href="pages/programme/defense.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127988;</div><strong style="font-size: 0.8rem;">Défense</strong></a>
-                            <a href="pages/programme/medias.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128240;</div><strong style="font-size: 0.8rem;">Médias</strong></a>
-                        </div>
+            <!-- Le Modèle 165 -->
+            <div style="margin-bottom: 4rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2.5rem; border-radius: var(--border-radius-lg); border-left: 5px solid var(--patriotisme);">
+                <h2 style="margin-bottom: 1.5rem;">Le Modèle 165 : l'efficacité au service de la France</h2>
+                <div class="grid-2" style="gap: 2rem;">
+                    <div>
+                        <h4 style="color: var(--patriotisme); margin-bottom: 0.75rem;">123 experts décident</h4>
+                        <p style="line-height: 1.6; margin-bottom: 1rem;">Des professionnels de terrain qui <strong>votent réellement</strong>. Médecins pour la santé, économistes pour l'économie, généraux pour la défense. <strong>Ceux qui savent, décident.</strong></p>
                     </div>
+                    <div>
+                        <h4 style="color: var(--humanisme); margin-bottom: 0.75rem;">Le Parlement consulte</h4>
+                        <p style="line-height: 1.6; margin-bottom: 1rem;">Les parlementaires posent des questions, émettent des avis. Leur rôle : représenter les citoyens et <strong>contrôler les résultats</strong>. Pas bloquer pendant des mois.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #dee2e6;">
+                    <p style="font-size: 1.1rem; margin: 0;"><strong>Résultat :</strong> Lois en 28 jours (pas 6 mois). Coût gouvernance divisé par 100. Chaque euro investi produit des résultats mesurables.</p>
+                </div>
+            </div>
 
-                    <!-- Argument Massue -->
-                    <div class="card" style="background: linear-gradient(135deg, #1a1a2e 0%, var(--patriotisme) 100%); color: white; margin-bottom: 3rem;">
-                        <div class="card-body" style="padding: 2rem; text-align: center;">
-                            <h3 style="color: white; margin-bottom: 1rem;">L'Argument Massue</h3>
-                            <div class="grid-3" style="gap: 2rem; align-items: center;">
-                                <div>
-                                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">&#129658;</div>
-                                    <p>"Etre opere par un chirurgien elu par vote populaire ?"</p>
-                                </div>
-                                <div style="font-size: 2rem;">&#10132;</div>
-                                <div>
-                                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">&#127467;&#127479;</div>
-                                    <p>Pourquoi confier votre pays a des politiciens au lieu d'experts ?</p>
-                                </div>
-                            </div>
+            <!-- Comment ça marche -->
+            <div style="margin-bottom: 4rem; background: var(--bg-secondary); padding: 2.5rem; border-radius: var(--border-radius-lg);">
+                <h2 style="text-align: center; margin-bottom: 2rem;">28 jours pour une loi. Voici comment.</h2>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: center;">
+                    <div>
+                        <div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: var(--patriotisme); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">1</div>
+                        <h4 style="margin-bottom: 0.5rem;">Proposition</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Directeur sectoriel propose un texte avec objectifs et KPIs (3 jours)</p>
+                    </div>
+                    <div>
+                        <div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: #6c757d; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">2</div>
+                        <h4 style="margin-bottom: 0.5rem;">Débat & vote experts</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Les experts du domaine débattent publiquement et votent (14 jours)</p>
+                    </div>
+                    <div>
+                        <div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: #4CAF50; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">3</div>
+                        <h4 style="margin-bottom: 0.5rem;">Parlement consulté</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Questions, avis consultatif. Contrôle citoyen. (7 jours)</p>
+                    </div>
+                    <div>
+                        <div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: var(--humanisme); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: 700;">4</div>
+                        <h4 style="margin-bottom: 0.5rem;">Signature & KPIs</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Président signe. Application immédiate. Suivi mensuel public.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10 Directions du Programme -->
+            <div style="margin-bottom: 4rem;">
+                <h2 style="text-align: center; margin-bottom: 0.5rem;">10 directions sectorielles. Des experts qui décident.</h2>
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Chaque direction a ses KPIs. Bonus si atteints. Remplacement si échec 2 ans.</p>
+                <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.75rem;">
+                    <a href="pages/programme/securite.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128737;</div><strong style="font-size: 0.8rem;">Sécurité</strong></a>
+                    <a href="pages/programme/justice.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#9878;</div><strong style="font-size: 0.8rem;">Justice</strong></a>
+                    <a href="pages/programme/immigration.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128274;</div><strong style="font-size: 0.8rem;">Immigration</strong></a>
+                    <a href="pages/programme/economie.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128176;</div><strong style="font-size: 0.8rem;">Économie</strong></a>
+                    <a href="pages/programme/sante.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127973;</div><strong style="font-size: 0.8rem;">Santé</strong></a>
+                    <a href="pages/programme/education.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127891;</div><strong style="font-size: 0.8rem;">Éducation</strong></a>
+                    <a href="pages/programme/logement.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127968;</div><strong style="font-size: 0.8rem;">Logement</strong></a>
+                    <a href="pages/programme/transports.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128646;</div><strong style="font-size: 0.8rem;">Transports</strong></a>
+                    <a href="pages/programme/services-publics.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127970;</div><strong style="font-size: 0.8rem;">Services</strong></a>
+                    <a href="pages/programme/ecologie.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127807;</div><strong style="font-size: 0.8rem;">Écologie</strong></a>
+                    <a href="pages/programme/defense.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127988;</div><strong style="font-size: 0.8rem;">Défense</strong></a>
+                    <a href="pages/programme/medias.html" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128240;</div><strong style="font-size: 0.8rem;">Médias</strong></a>
+                </div>
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="pages/programme/index.html" class="btn btn-primary">Voir le programme complet</a>
+                </div>
+            </div>
+
+            <!-- Nos engagements -->
+            <div style="margin-bottom: 4rem;">
+                <h2 style="text-align: center; margin-bottom: 0.5rem;">Les garanties du Modèle 165</h2>
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Mesurable. Vérifiable. Chaque mois.</p>
+                <div class="grid-2" style="gap: 2rem;">
+                    <div class="card" style="border-left: 4px solid #4CAF50;">
+                        <div class="card-body">
+                            <h4 style="color: #4CAF50; margin-bottom: 1rem;">&#10004; Dashboard public temps réel</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.6;">KPIs de chaque direction publiés mensuellement. Taux d'emploi, délais médicaux, criminalité... Tout est visible, tout est mesurable.</p>
                         </div>
                     </div>
+                    <div class="card" style="border-left: 4px solid #4CAF50;">
+                        <div class="card-body">
+                            <h4 style="color: #4CAF50; margin-bottom: 1rem;">&#10004; Bonus = résultats</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.6;">Salaire fixe modeste + bonus si KPIs atteints. Échec 2 ans = remplacement par vote des pairs. Pas de rente, pas de planqués.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="border-left: 4px solid #4CAF50;">
+                        <div class="card-body">
+                            <h4 style="color: #4CAF50; margin-bottom: 1rem;">&#10004; 1 milliard d'économies/an</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.6;">165 personnes au lieu de 14,000. Coût gouvernance : 11 M€ au lieu de 1,1 Md€. L'argent va aux services, pas à la bureaucratie.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="border-left: 4px solid #4CAF50;">
+                        <div class="card-body">
+                            <h4 style="color: #4CAF50; margin-bottom: 1rem;">&#10004; Souveraineté 80%</h4>
+                            <p style="font-size: 0.95rem; line-height: 1.6;">Autosuffisance agricole, énergétique, numérique. La France produit pour elle. Les autres s'adaptent à nos standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
-    <!-- CTA Full Width -->
-    <section class="banner" style="background: linear-gradient(135deg, var(--patriotisme) 0%, var(--humanisme) 100%); min-height: 250px;">
-        <div class="banner-content" style="max-width: 1400px;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Rejoins le mouvement</h2>
-            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 1.5rem;">
-                Tu aimes la France ? Tu crois a la raison ? Tu veux que ca marche pour tous ?
+    <!-- CTA Vote Sitix -->
+    <section style="background: #FFD700; padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: #1a1a2e; margin-bottom: 1rem; font-size: 1.8rem;">&#9733; VOTE DEMAIN &#9733;</h2>
+            <p style="font-size: 1.2rem; color: #1a1a2e; margin-bottom: 1.5rem;">
+                <strong>Élection présidentielle Identité National</strong><br>
+                Vote Sitix pour le Modèle 165.
             </p>
-            <p style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem;">On a besoin de gens serieux.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="pages/equipe.html" class="btn btn-secondary" style="font-size: 1rem; padding: 0.8rem 1.5rem;">Voir l'equipe</a>
-                <a href="pages/faq.html" class="btn" style="background: rgba(255,255,255,0.2); color: white; font-size: 1rem; padding: 0.8rem 1.5rem;">Lire la FAQ</a>
-                <a href="pages/strategie.html" class="btn" style="background: rgba(255,255,255,0.15); color: white; font-size: 1rem; padding: 0.8rem 1.5rem;">Nous rejoindre</a>
+                <a href="https://discord.gg/Vb2TavAf9q" target="_blank" class="btn" style="background: #1a1a2e; color: #FFD700; font-size: 1.1rem; padding: 1rem 2rem;">Rejoindre Identité National</a>
+                <a href="https://discord.gg/SRv2X39rUF" target="_blank" class="btn" style="background: #5865F2; color: white; font-size: 1.1rem; padding: 1rem 2rem;">Rejoindre Hémicycle</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="banner" style="background: linear-gradient(135deg, var(--patriotisme) 0%, var(--humanisme) 100%); min-height: 280px;">
+        <div class="banner-content" style="max-width: 800px;">
+            <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem;">Le Modèle 165.<br>La France qui fonctionne.</h2>
+            <p style="font-size: 1.2rem; opacity: 0.95; margin-bottom: 2rem; line-height: 1.6;">
+                165 experts. 28 jours. 1 Md€ d'économies.<br>
+                <strong>Patriotisme. Laïcité. Humanisme.</strong>
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="pages/strategie.html" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1rem 2rem;">Rejoindre ORDRE NATIONAL</a>
+                <a href="pages/systeme.html" class="btn" style="background: rgba(255,255,255,0.2); color: white; font-size: 1.1rem; padding: 1rem 2rem;">Découvrir le Modèle 165</a>
             </div>
         </div>
     </section>
@@ -266,8 +270,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>ORDRE NATIONAL - Patriotisme. Laicite. Humanisme.</p>
-                <p style="margin-top: var(--spacing-sm);">"La competence au pouvoir."</p>
+                <p><strong>ORDRE NATIONAL</strong></p>
+                <p style="margin-top: 0.5rem;">Patriotisme. Laïcité. Humanisme.</p>
+                <p style="margin-top: 0.5rem; font-style: italic;">"La compétence au pouvoir."</p>
+                <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">Simulation politique fictive</p>
             </div>
         </div>
     </footer>

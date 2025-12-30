@@ -9,7 +9,7 @@
         .equipe-header {
             background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
             color: white;
-            padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+            padding: var(--spacing-xl) 0;
         }
 
         .leader-section {
@@ -184,6 +184,24 @@
         </div>
     </nav>
 
+    <!-- Bandeau VOTE -->
+    <section style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); padding: 1.5rem 0; text-align: center; margin-top: 70px;">
+        <div class="container">
+            <h2 style="color: #000; margin-bottom: 0.3rem; font-size: 1.5rem;">&#9733; VOTE DEMAIN &#9733;</h2>
+            <p style="color: #000; font-size: 1rem; margin-bottom: 0.8rem;">
+                <strong>Election presidentielle Identite National</strong> - Vote Sitix pour le Modele 165
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://discord.gg/Vb2TavAf9q" target="_blank" style="background: #5865F2; color: white; padding: 0.5rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                    &#128172; Identite National
+                </a>
+                <a href="https://discord.gg/SRv2X39rUF" target="_blank" style="background: #2c3e50; color: white; padding: 0.5rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                    &#127891; Hemicycle
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Header -->
     <header class="equipe-header" style="position: relative; min-height: 300px; display: flex; align-items: center;">
         <!-- FUTURE: Ajouter image de fond ici -->
@@ -197,8 +215,8 @@
                         <span class="badge" style="background: rgba(255,255,255,0.2); color: white;">COMPETENCE</span>
                         <span class="badge" style="background: rgba(255,255,255,0.2); color: white;">ENGAGEMENT</span>
                     </div>
-                    <h1 style="color: white; margin: 0;">Notre Equipe</h1>
-                    <p style="font-size: 1.3rem; opacity: 0.9; margin-top: 0.5rem; color: white;">Des gens serieux unis par les memes valeurs</p>
+                    <h1 style="color: white; margin: 0;">Notre Équipe</h1>
+                    <p style="font-size: 1.3rem; opacity: 0.9; margin-top: 0.5rem; color: white;">Des compétences diverses, une vision commune : la France qui fonctionne.</p>
                 </div>
             </div>
         </div>
@@ -223,12 +241,12 @@
                         </div>
 
                         <blockquote style="background: rgba(255,255,255,0.1); border-left-color: white; color: white;">
-                            "Le problème n'est pas les personnes au pouvoir. C'est le système qui les sélectionne. On élit des gens populaires au lieu de gens compétents. Il faut changer ça."
+                            "On peut construire un pays où les décisions sont prises par ceux qui savent, validées par ceux qui sont élus, et contrôlées par les résultats. C'est possible. C'est ce qu'on propose."
                         </blockquote>
 
                         <p style="opacity: 0.9;">
-                            <strong>Pas politicien de carrière</strong> : Aucune compromission passée<br>
-                            <strong>Pas héritier</strong> : A construit seul, comprend le travail<br>
+                            <strong>Entrepreneur</strong> : A construit seul, comprend le travail<br>
+                            <strong>Libre</strong> : Aucune dette envers le système politique<br>
                             <strong>24 ans</strong> : Va vivre 50 ans avec les décisions d'aujourd'hui
                         </p>
                     </div>
@@ -453,31 +471,42 @@
             <section style="margin-top: var(--spacing-xxl);">
                 <div class="card">
                     <div class="card-header">
-                        <h3 style="margin: 0;">Valeurs d'Équipe</h3>
+                        <h3 style="margin: 0;">Notre culture d'équipe</h3>
                     </div>
                     <div class="card-body">
                         <div class="grid-2">
                             <div>
-                                <h4>Ce qui nous unit</h4>
+                                <h4>Ce qui nous rassemble</h4>
                                 <ul>
-                                    <li><strong>PATRIOTISME</strong> : Aimer la France, vouloir les meilleurs</li>
-                                    <li><strong>LAÏCISME</strong> : Raison contre dogmes</li>
-                                    <li><strong>HUMANISME</strong> : Au service de tous</li>
-                                    <li><strong>MÉRITE</strong> : Résultats, pas discours</li>
-                                    <li><strong>LOYAUTÉ</strong> : Désaccord interne, ligne unique externe</li>
+                                    <li><strong>PATRIOTISME</strong> : La France mérite les meilleurs</li>
+                                    <li><strong>LAÏCITÉ</strong> : Les faits guident nos décisions</li>
+                                    <li><strong>HUMANISME</strong> : Au service de chaque Français</li>
+                                    <li><strong>MÉRITE</strong> : Seuls les résultats comptent</li>
+                                    <li><strong>LOYAUTÉ</strong> : Débat interne, unité externe</li>
                                 </ul>
                             </div>
                             <div>
-                                <h4>Règles internes</h4>
+                                <h4>Notre fonctionnement</h4>
                                 <ul>
-                                    <li>✅ Débat libre en privé</li>
-                                    <li>✅ Ligne unique en public</li>
-                                    <li>✅ Résultats = seul critère</li>
-                                    <li>❌ Zéro tolérance : corruption, violence, complotisme</li>
+                                    <li>✅ Liberté de débat en interne</li>
+                                    <li>✅ Message unifié en public</li>
+                                    <li>✅ Évaluation sur les résultats</li>
+                                    <li>✅ Exigence d'intégrité absolue</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- CTA Rejoindre -->
+            <section style="margin-top: var(--spacing-xxl); background: linear-gradient(135deg, var(--patriotisme) 0%, var(--humanisme) 100%); padding: var(--spacing-xxl); border-radius: var(--border-radius-lg); text-align: center; color: white;">
+                <h2 style="color: white; margin-bottom: 1rem;">Rejoins l'équipe</h2>
+                <p style="font-size: 1.2rem; opacity: 0.95; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Ton talent peut faire la différence. Si tu partages nos valeurs et veux contribuer à construire une France qui fonctionne, contacte-nous.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="strategie.html" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1rem 2rem;">Rejoindre le mouvement</a>
                 </div>
             </section>
         </div>
