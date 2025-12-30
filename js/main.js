@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initComparison();
     initSearch();
+    initScrollSpy();
+    initBreadcrumbs();
 });
 
 /* === NAVIGATION === */
@@ -251,9 +253,107 @@ function formatNumber(num) {
     return new Intl.NumberFormat('fr-FR').format(num);
 }
 
+/* === SCROLL SPY (Table of Contents) === */
+function initScrollSpy() {
+    const toc = document.querySelector('.page-toc');
+    if (!toc) return;
+
+    const tocLinks = toc.querySelectorAll('.toc-list a');
+    const sections = [];
+
+    // Collecter les sections correspondantes
+    tocLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            const section = document.querySelector(href);
+            if (section) {
+                sections.push({ link, section });
+            }
+        }
+    });
+
+    if (sections.length === 0) return;
+
+    // Observer pour détecter la section visible
+    const observerOptions = {
+        root: null,
+        rootMargin: '-100px 0px -60% 0px',
+        threshold: 0
+    };
+
+    let currentActive = null;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const activeLink = sections.find(s => s.section === entry.target)?.link;
+                if (activeLink && activeLink !== currentActive) {
+                    // Retirer l'ancien actif
+                    tocLinks.forEach(l => l.classList.remove('active'));
+                    // Activer le nouveau
+                    activeLink.classList.add('active');
+                    currentActive = activeLink;
+                }
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(({ section }) => {
+        observer.observe(section);
+    });
+
+    // Smooth scroll pour les liens TOC
+    tocLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
+        });
+    });
+}
+
+/* === BREADCRUMBS === */
+function initBreadcrumbs() {
+    const breadcrumbs = document.querySelector('.breadcrumbs');
+    if (!breadcrumbs) return;
+
+    // Animation d'entrée
+    breadcrumbs.style.opacity = '0';
+    breadcrumbs.style.transform = 'translateY(-10px)';
+
+    setTimeout(() => {
+        breadcrumbs.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        breadcrumbs.style.opacity = '1';
+        breadcrumbs.style.transform = 'translateY(0)';
+    }, 100);
+}
+
+/* === PROGRAMME HUB CARDS === */
+function initProgrammeCards() {
+    const cards = document.querySelectorAll('.hub-card');
+    if (cards.length === 0) return;
+
+    cards.forEach((card, index) => {
+        // Animation décalée à l'entrée
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+
+        setTimeout(() => {
+            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 100 + (index * 50));
+    });
+}
+
 // Export pour utilisation globale
 window.ON = {
     copyToClipboard,
     showToast,
-    formatNumber
+    formatNumber,
+    initProgrammeCards
 };
