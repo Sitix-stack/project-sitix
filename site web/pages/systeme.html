@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Système - ORDRE NATIONAL</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .systeme-header {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            color: white;
+            padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+        }
+
+        .flow-diagram {
+            background: white;
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            padding: var(--spacing-lg);
+            margin: var(--spacing-md) 0;
+            border-radius: var(--border-radius);
+            background: var(--bg-secondary);
+        }
+
+        .flow-step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--patriotisme);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-right: var(--spacing-lg);
+            flex-shrink: 0;
+        }
+
+        .flow-arrow {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--patriotisme);
+            margin: var(--spacing-sm) 0;
+        }
+
+        .conseil-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .conseil-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-normal);
+        }
+
+        .conseil-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .conseil-header {
+            padding: var(--spacing-lg);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .conseil-header h4 {
+            margin: 0;
+            color: white;
+        }
+
+        .conseil-body {
+            padding: var(--spacing-lg);
+        }
+
+        .conseil-experts {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Couleurs des conseils */
+        .conseil-securite .conseil-header { background: #2c3e50; }
+        .conseil-justice .conseil-header { background: #8e44ad; }
+        .conseil-economie .conseil-header { background: #f39c12; }
+        .conseil-sante .conseil-header { background: #e74c3c; }
+        .conseil-education .conseil-header { background: #3498db; }
+        .conseil-immigration .conseil-header { background: #27ae60; }
+        .conseil-energie .conseil-header { background: #16a085; }
+        .conseil-culture .conseil-header { background: #9b59b6; }
+        .conseil-affaires .conseil-header { background: #34495e; }
+        .conseil-numerique .conseil-header { background: #1abc9c; }
+
+        .composition-table {
+            width: 100%;
+            margin: var(--spacing-lg) 0;
+        }
+
+        .composition-row {
+            display: flex;
+            align-items: center;
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .composition-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--patriotisme);
+            width: 80px;
+        }
+
+        .process-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border: 2px solid #1976d2;
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            margin: var(--spacing-lg) 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-brand">
+                <span style="font-size: 1.5rem;">🇫🇷</span>
+                <span>ORDRE NATIONAL</span>
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="systeme.html" class="active">Notre Systeme</a></li>
+                <li><a href="constitution.html">Constitution</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="reformes.html">Reformes</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li><a href="strategie.html">Strategie</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header avec emplacement image -->
+    <header class="systeme-header" style="position: relative; min-height: 300px; display: flex; align-items: center;">
+        <!-- Emplacement banniere (remplacer le background-color par background-image) -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(44,62,80,0.95) 0%, rgba(26,37,47,0.9) 100%); z-index: 1;">
+            <!-- FUTURE: Ajouter image de fond ici -->
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <div style="font-size: 5rem;">&#127891;</div>
+                <div>
+                    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">La Republique Meritocratique</h1>
+                    <p style="font-size: 1.3rem; opacity: 0.9; margin-bottom: 0.5rem;">Les experts conseillent, les elus decident, le peuple juge</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">&#10003; Democratique</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">&#10003; Efficace</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">&#10003; Transparent</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Principe Fondamental -->
+    <section class="section">
+        <div class="container container-narrow">
+            <div class="section-title">
+                <h2>Le Principe Fondamental</h2>
+            </div>
+
+            <div class="grid-3 text-center" style="margin: var(--spacing-xl) 0;">
+                <div class="card">
+                    <div class="card-body">
+                        <div style="font-size: 3rem;">🗳️</div>
+                        <h4>Le Parlement</h4>
+                        <p style="font-size: 1.2rem; color: var(--patriotisme); font-weight: 700;">DÉCIDE</p>
+                        <small>Légitimité démocratique</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div style="font-size: 3rem;">🎓</div>
+                        <h4>Les Experts</h4>
+                        <p style="font-size: 1.2rem; color: var(--humanisme); font-weight: 700;">CONSEILLENT</p>
+                        <small>Qualité technique</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div style="font-size: 3rem;">👥</div>
+                        <h4>Le Peuple</h4>
+                        <p style="font-size: 1.2rem; color: var(--success); font-weight: 700;">JUGE</p>
+                        <small>Résultats mesurés</small>
+                    </div>
+                </div>
+            </div>
+
+            <blockquote>
+                <p><strong>Ce que c'est :</strong> Une démocratie parlementaire <em>améliorée</em> où les lois sont filtrées par des professionnels du terrain avant d'être votées par les élus du peuple.</p>
+                <p style="margin-top: var(--spacing-md);"><strong>Ce que ce n'est PAS :</strong></p>
+                <ul style="margin: var(--spacing-sm) 0 0 var(--spacing-lg);">
+                    <li>Pas une technocratie (les experts ne décident pas)</li>
+                    <li>Pas anti-démocratique (le Parlement garde le pouvoir)</li>
+                    <li>Pas élitiste (experts = terrain, pas énarques)</li>
+                </ul>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Architecture Globale -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Architecture Globale</h2>
+            </div>
+
+            <div class="flow-diagram">
+                <div class="flow-step" style="background: var(--patriotisme); color: white;">
+                    <div class="flow-step-number" style="background: white; color: var(--patriotisme);">🗳️</div>
+                    <div>
+                        <h4 style="color: white; margin: 0;">PEUPLE FRANÇAIS</h4>
+                        <p style="margin: 0; opacity: 0.9;">Souverain - Élit ses représentants au suffrage universel</p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <div class="flow-step">
+                    <div class="flow-step-number">1</div>
+                    <div>
+                        <h4 style="margin: 0;">PARLEMENT (577 députés)</h4>
+                        <p style="margin: 0;">Propose les lois • Débat public transparent</p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <div class="flow-step" style="background: #e3f2fd;">
+                    <div class="flow-step-number" style="background: #1976d2;">2</div>
+                    <div>
+                        <h4 style="margin: 0; color: #1976d2;">10 CONSEILS SECTORIELS (40 experts chacun)</h4>
+                        <p style="margin: 0;">Examinent dans leur domaine (30 jours max)<br>
+                        <strong>Avis favorable</strong> → Vote Parlement<br>
+                        <strong>Réserves</strong> → Révision (max 3 itérations)</p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <div class="flow-step">
+                    <div class="flow-step-number">3</div>
+                    <div>
+                        <h4 style="margin: 0;">PARLEMENT</h4>
+                        <p style="margin: 0;">Vote final • <strong>Toujours le dernier mot</strong></p>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <div class="flow-step" style="background: var(--success); color: white;">
+                    <div class="flow-step-number" style="background: white; color: var(--success);">✓</div>
+                    <div>
+                        <h4 style="margin: 0; color: white;">INDICATEURS PUBLICS</h4>
+                        <p style="margin: 0; opacity: 0.9;">Résultats mesurables • Publication annuelle</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-box text-center">
+                <h4 style="color: #1976d2;">🛡️ Garde-fou démocratique</h4>
+                <p><strong>Référendum d'initiative populaire :</strong> 500 000 signatures = référendum obligatoire</p>
+                <p style="margin: 0;">Le peuple peut toujours court-circuiter le système si nécessaire.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Les 10 Conseils -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Les 10 Conseils Sectoriels</h2>
+                <p>Des experts de terrain, pas des technocrates déconnectés</p>
+            </div>
+
+            <div class="conseil-grid">
+                <div class="conseil-card conseil-securite">
+                    <div class="conseil-header">
+                        <span style="font-size: 1.5rem;">🛡️</span>
+                        <h4>Sécurité & Défense</h4>
+                    </div>
+                    <div class="conseil-body">
+                        <p class="conseil-experts">Généraux, officiers supérieurs, commissaires de police, experts renseignement</p>
+                    </div>
+                </div>
+
+                <div class="conseil-card conseil-justice">
+                    <div class="conseil-header">
+                        <span style="font-size: 1.5rem;">⚖️</span>
+                        <h4>Justice</h4>
+                    </div>
+                    <div class="conseil-body">
+                        <p class="conseil-experts">Magistrats, procureurs, avocats expérimentés, directeurs pénitentiaires</p>
+                    </div>
+                </div>
+
+                <div class="conseil-card conseil-economie">
+                    <div class="conseil-header">
+                        <span style="font-size: 1.5rem;">💼</span>
+                        <h4>Économie & Travail</h4>
+                    </div>
+                    <div class="conseil-body">
+                        <p class="conseil-experts">Entrepreneurs PME, économistes praticiens, DRH, experts fiscaux</p>
+                    </div>
+                </div>
+
+                <div class="conseil-card conseil-sante">
+                    <div class="conseil-header">
+                        <span style="font-size: 1.5rem;">🏥</span>
+                        <h4>Santé</h4>
+                    </div>
+                    <div class="conseil-body">
+                        <p class="conseil-experts">Médecins terrain, infirmiers chefs, chercheurs, directeurs hôpitaux</p>
+                    </div>
+                </div>
+
+                <div class="conseil-card conseil-education">
+                    <div class="conseil-header">
+                        <span style="font-size: 1.5rem;">🎓</span>
+                        <h4>Éducation</h4>
+                    </div>
+                    <div class="conseil-body">
+                        <p class="conseil-experts">Professeurs terrain, pédagogues, directeurs d'établissement, chercheurs</p>
+                    </div>
+                </div>
+
+                <div class="conseil-card conseil-immigration">
+                    <div class="conseil-header">
+                        <span style="font-size: 1.5rem;">👥</span>
+                        <h4>Démographie & Immigration</h4>
+                    </div>
+                    <div class="conseil-body">
+                        <p class="conseil-experts">Démographes, préfets, sociologues, travailleurs sociaux</p>
+                    </div>
+                </div>
+
+                <div class="conseil-card conseil-energie">
+                    <div class="conseil-header">
+                        <span style="font-size: 1.5rem;">⚡</span>
+                        <h4>Énergie & Environnement</h4>
+                    </div>
+                    <div class="conseil-body">
+                        <p class="conseil-experts">Ingénieurs EDF/nucléaire, climatologues, experts énergies renouvelables</p>
+                    </div>
+                </div>
+
+                <div class="conseil-card conseil-culture">
+                    <div class="conseil-header">
+                        <span style="font-size: 1.5rem;">🏛️</span>
+                        <h4>Culture & Patrimoine</h4>
+                    </div>
+                    <div class="conseil-body">
+                        <p class="conseil-experts">Historiens, conservateurs, artistes reconnus, archéologues</p>
+                    </div>
+                </div>
+
+                <div class="conseil-card conseil-affaires">
+                    <div class="conseil-header">
+                        <span style="font-size: 1.5rem;">🌍</span>
+                        <h4>Affaires Étrangères</h4>
+                    </div>
+                    <div class="conseil-body">
+                        <p class="conseil-experts">Ambassadeurs, stratèges, experts commerce international</p>
+                    </div>
+                </div>
+
+                <div class="conseil-card conseil-numerique">
+                    <div class="conseil-header">
+                        <span style="font-size: 1.5rem;">💻</span>
+                        <h4>Numérique & Innovation</h4>
+                    </div>
+                    <div class="conseil-body">
+                        <p class="conseil-experts">Entrepreneurs tech, chercheurs IA, experts cybersécurité</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Composition des Conseils -->
+    <section class="section section-alt">
+        <div class="container container-narrow">
+            <div class="section-title">
+                <h2>Composition de chaque Conseil</h2>
+                <p>40 membres par Conseil = 400 experts au total</p>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="composition-row">
+                        <div class="composition-number">15</div>
+                        <div>
+                            <strong>Désignés par les Ordres professionnels</strong>
+                            <p style="margin: var(--spacing-xs) 0 0; color: var(--text-secondary);">
+                                Ex: Ordre des Médecins, Barreau, etc. → Reconnaissance par les pairs
+                            </p>
+                        </div>
+                    </div>
+                    <div class="composition-row">
+                        <div class="composition-number">15</div>
+                        <div>
+                            <strong>Élus par les professionnels du secteur</strong>
+                            <p style="margin: var(--spacing-xs) 0 0; color: var(--text-secondary);">
+                                Vote des 10 000+ professionnels les plus expérimentés → Légitimité démocratique sectorielle
+                            </p>
+                        </div>
+                    </div>
+                    <div class="composition-row" style="border-bottom: none;">
+                        <div class="composition-number">10</div>
+                        <div>
+                            <strong>Nommés par le Président</strong>
+                            <p style="margin: var(--spacing-xs) 0 0; color: var(--text-secondary);">
+                                Sur proposition du conseil existant → Lien avec le pouvoir élu
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2" style="margin-top: var(--spacing-xl);">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 style="margin: 0;">Conditions d'éligibilité</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul style="list-style: none;">
+                            <li style="padding: var(--spacing-sm) 0;">✅ 10 ans d'expérience minimum</li>
+                            <li style="padding: var(--spacing-sm) 0;">✅ Diplôme adapté au poste</li>
+                            <li style="padding: var(--spacing-sm) 0;">✅ Casier judiciaire vierge</li>
+                            <li style="padding: var(--spacing-sm) 0;">✅ Nationalité française</li>
+                            <li style="padding: var(--spacing-sm) 0;">❌ Aucun mandat politique (incompatibilité totale)</li>
+                            <li style="padding: var(--spacing-sm) 0;">📋 Conflits d'intérêts déclarés publiquement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" style="background: var(--humanisme);">
+                        <h4 style="margin: 0;">Mandat</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul style="list-style: none;">
+                            <li style="padding: var(--spacing-sm) 0;">⏱️ <strong>Durée :</strong> 6 ans</li>
+                            <li style="padding: var(--spacing-sm) 0;">🔄 <strong>Renouvellement :</strong> Par tiers tous les 2 ans</li>
+                            <li style="padding: var(--spacing-sm) 0;">🚫 <strong>Limite :</strong> 2 mandats maximum (12 ans)</li>
+                            <li style="padding: var(--spacing-sm) 0;">⚠️ <strong>Révocation :</strong> Vote 2/3 des pairs + Conseil Constitutionnel</li>
+                            <li style="padding: var(--spacing-sm) 0;">💰 <strong>Rémunération :</strong> Indemnité (évite professionnalisation)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cycle Législatif -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Le Cycle Législatif</h2>
+                <p>Comment une loi est créée dans notre système</p>
+            </div>
+
+            <div class="tabs">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="etape1">1. Initiative</button>
+                    <button class="tab-btn" data-tab="etape2">2. Examen</button>
+                    <button class="tab-btn" data-tab="etape3">3. Conciliation</button>
+                    <button class="tab-btn" data-tab="etape4">4. Vote</button>
+                </div>
+
+                <div id="etape1" class="tab-content active">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Étape 1 : Initiative</h3>
+                            <p><strong>Qui peut proposer une loi ?</strong></p>
+                            <ul>
+                                <li>Tout député ou groupe de députés</li>
+                                <li>Le Gouvernement (projets de loi)</li>
+                                <li><strong>Nouveau :</strong> Pétition citoyenne (100 000 signatures → examen obligatoire)</li>
+                            </ul>
+                            <p style="margin-top: var(--spacing-lg);"><strong>Contenu obligatoire du projet :</strong></p>
+                            <ul>
+                                <li>Problème identifié</li>
+                                <li>Solution proposée</li>
+                                <li>Impact estimé (budget, emploi, etc.)</li>
+                                <li><strong>Indicateurs de succès mesurables</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="etape2" class="tab-content">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Étape 2 : Examen par le Conseil Sectoriel</h3>
+                            <p><strong>Délai :</strong> 30 jours maximum</p>
+                            <p><strong>Le Conseil examine :</strong></p>
+                            <ul>
+                                <li>Faisabilité technique</li>
+                                <li>Cohérence juridique</li>
+                                <li>Impact réel attendu</li>
+                                <li>Effets secondaires possibles</li>
+                                <li>Alternatives éventuelles</li>
+                            </ul>
+                            <p style="margin-top: var(--spacing-lg);"><strong>Débat PUBLIC</strong> (retransmis)</p>
+                            <div class="grid-2" style="margin-top: var(--spacing-lg);">
+                                <div style="padding: var(--spacing-md); background: #e8f5e9; border-radius: var(--border-radius);">
+                                    <strong style="color: var(--success);">AVIS FAVORABLE</strong>
+                                    <p style="margin: var(--spacing-sm) 0 0;">→ Le projet passe directement au vote du Parlement</p>
+                                </div>
+                                <div style="padding: var(--spacing-md); background: #fff3e0; border-radius: var(--border-radius);">
+                                    <strong style="color: #e65100;">AVIS AVEC RÉSERVES</strong>
+                                    <p style="margin: var(--spacing-sm) 0 0;">→ Le Conseil propose des modifications</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="etape3" class="tab-content">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Étape 3 : Procédure de conciliation (si réserves)</h3>
+                            <p>Si le Conseil émet des réserves, le député proposant a 3 options :</p>
+                            <div class="grid-3" style="margin-top: var(--spacing-lg);">
+                                <div class="card" style="background: var(--bg-secondary);">
+                                    <div class="card-body text-center">
+                                        <strong>A) ACCEPTER</strong>
+                                        <p style="margin: var(--spacing-sm) 0 0;">Intégrer les modifications → Vote Parlement</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="background: var(--bg-secondary);">
+                                    <div class="card-body text-center">
+                                        <strong>B) MODIFIER</strong>
+                                        <p style="margin: var(--spacing-sm) 0 0;">Proposer une nouvelle version → Retour au Conseil</p>
+                                    </div>
+                                </div>
+                                <div class="card" style="background: var(--bg-secondary);">
+                                    <div class="card-body text-center">
+                                        <strong>C) MAINTENIR</strong>
+                                        <p style="margin: var(--spacing-sm) 0 0;">Garder le texte original → Vote Parlement quand même</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="process-box" style="margin-top: var(--spacing-lg);">
+                                <p style="margin: 0;"><strong>Règle clé :</strong> Maximum 3 allers-retours Député ↔ Conseil. Après 3 tours sans accord, vote Parlement sur dernière version.</p>
+                                <p style="margin-top: var(--spacing-md); color: var(--humanisme);"><strong>Le Parlement peut TOUJOURS voter, même si le Conseil a des réserves. Les experts conseillent, ils ne bloquent jamais.</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="etape4" class="tab-content">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Étape 4 : Vote et Promulgation</h3>
+                            <div class="grid-2">
+                                <div>
+                                    <h4>Vote du Parlement</h4>
+                                    <ul>
+                                        <li>Débat public</li>
+                                        <li>Amendements possibles</li>
+                                        <li>Vote final</li>
+                                    </ul>
+                                    <p><strong>Si ADOPTÉ</strong> → Promulgation</p>
+                                    <p><strong>Si REJETÉ</strong> → Fin du projet</p>
+                                </div>
+                                <div>
+                                    <h4>Après promulgation</h4>
+                                    <ul>
+                                        <li>Président signe</li>
+                                        <li>Publication Journal Officiel</li>
+                                        <li>Loi en vigueur</li>
+                                        <li><strong>Indicateurs de suivi activés</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Différences avec le système actuel -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>AVANT / APRES : Comparaison des Systemes</h2>
+                <p>Ce qui change concretement et les benefices attendus</p>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Aspect</th>
+                            <th style="background: #d32f2f; width: 30%;">&#10060; AVANT (Systeme actuel)</th>
+                            <th style="background: #388e3c; width: 30%;">&#10004; APRES (Republique Meritocratique)</th>
+                            <th style="background: #1976d2; width: 20%;">&#128200; Benefice</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Qui propose les lois</strong></td>
+                            <td>Deputes + Gouvernement uniquement</td>
+                            <td>Idem + petition citoyenne (100k signatures)</td>
+                            <td style="color: #1976d2; font-weight: 600;">+Democratie directe</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Qui examine les lois</strong></td>
+                            <td>Commissions parlementaires (politiciens)</td>
+                            <td>Conseils sectoriels (400 experts terrain)</td>
+                            <td style="color: #1976d2; font-weight: 600;">+Qualite technique</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type d'experts</strong></td>
+                            <td>Enarques, technocrates deconnectes</td>
+                            <td>Professionnels de terrain (10 ans XP min)</td>
+                            <td style="color: #1976d2; font-weight: 600;">+Realisme</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Qualite des lois</strong></td>
+                            <td>Variable, souvent inapplicable</td>
+                            <td>Filtree par expertise avant vote</td>
+                            <td style="color: #1976d2; font-weight: 600;">-80% lois inutiles</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transparence</strong></td>
+                            <td>Debats opaques, lobbys invisibles</td>
+                            <td>Debats publics retransmis + indicateurs</td>
+                            <td style="color: #1976d2; font-weight: 600;">+Confiance citoyens</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Responsabilite</strong></td>
+                            <td>Quasi nulle, pas de suivi</td>
+                            <td>Indicateurs publics, resultats mesures</td>
+                            <td style="color: #1976d2; font-weight: 600;">+Responsabilisation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Delai adoption</strong></td>
+                            <td>1-3 ans en moyenne</td>
+                            <td>2-6 mois maximum</td>
+                            <td style="color: #1976d2; font-weight: 600;">-70% delais</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Blocage possible</strong></td>
+                            <td>Oui (obstruction parlementaire)</td>
+                            <td>Non (3 tours max, puis vote)</td>
+                            <td style="color: #1976d2; font-weight: 600;">+Efficacite</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Garde-fou citoyen</strong></td>
+                            <td>Aucun entre 2 elections</td>
+                            <td>Referendum 500k signatures</td>
+                            <td style="color: #1976d2; font-weight: 600;">+Controle populaire</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="grid-3" style="margin-top: var(--spacing-xl);">
+                <div class="card" style="background: #e8f5e9; border: 2px solid #4CAF50;">
+                    <div class="card-body text-center">
+                        <div style="font-size: 2.5rem;">&#128200;</div>
+                        <h4 style="color: #2e7d32;">Lois de meilleure qualite</h4>
+                        <p>Validees par des experts avant adoption</p>
+                    </div>
+                </div>
+                <div class="card" style="background: #e3f2fd; border: 2px solid #2196F3;">
+                    <div class="card-body text-center">
+                        <div style="font-size: 2.5rem;">&#9201;</div>
+                        <h4 style="color: #1565c0;">Processus plus rapide</h4>
+                        <p>Moins de blocages, plus d'efficacite</p>
+                    </div>
+                </div>
+                <div class="card" style="background: #fff3e0; border: 2px solid #FF9800;">
+                    <div class="card-body text-center">
+                        <div style="font-size: 2.5rem;">&#128101;</div>
+                        <h4 style="color: #e65100;">Citoyens impliques</h4>
+                        <p>Petitions + referendums + transparence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>ORDRE NATIONAL - Patriotisme. Laïcité. Humanisme.</p>
+                <p style="margin-top: var(--spacing-sm);">"La compétence au pouvoir."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

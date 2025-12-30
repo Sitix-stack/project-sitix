@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDRE NATIONAL - La competence au pouvoir</title>
+    <meta name="description" content="Mouvement politique pour une Republique Meritocratique. Patriotisme, Laicite, Humanisme.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Styles specifiques pour layout ultra-wide */
+        .mega-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+        .span-2 { grid-column: span 2; }
+        .span-3 { grid-column: span 3; }
+        .span-4 { grid-column: span 4; }
+        .span-6 { grid-column: span 6; }
+        .span-8 { grid-column: span 8; }
+        .span-12 { grid-column: span 12; }
+        .dashboard-grid { display: grid; grid-template-columns: 250px 1fr 1fr 1fr 250px; gap: 1.5rem; max-width: 100%; }
+        .triple-col { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 2rem; }
+        .quad-col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .quint-col { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
+        .hex-col { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
+        .mini-card { padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .stat-mini { text-align: center; padding: 0.75rem; }
+        .stat-mini .num { font-size: 1.8rem; font-weight: 700; line-height: 1; }
+        .stat-mini .label { font-size: 0.7rem; opacity: 0.7; margin-top: 0.25rem; }
+        .sidebar-widget { background: white; border-radius: 12px; padding: 1.25rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 1rem; }
+        .sidebar-widget h4 { font-size: 0.9rem; color: var(--patriotisme); margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--patriotisme); }
+        .quick-links a { display: block; padding: 0.5rem 0; color: var(--text-secondary); font-size: 0.85rem; border-bottom: 1px solid #eee; }
+        .quick-links a:hover { color: var(--patriotisme); }
+        .timeline-mini { border-left: 3px solid var(--patriotisme); padding-left: 1rem; }
+        .timeline-mini-item { margin-bottom: 0.75rem; font-size: 0.85rem; }
+        .timeline-mini-item::before { content: ''; width: 10px; height: 10px; background: var(--patriotisme); border-radius: 50%; display: inline-block; margin-left: -1.4rem; margin-right: 0.5rem; }
+    </style>
+</head>
+<body>
+    <!-- Navigation Full Width -->
+    <nav class="navbar">
+        <div class="container-full" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.3rem;">
+                <span style="font-size: 1.8rem;">&#127467;&#127479;</span>
+                <span>ORDRE NATIONAL</span>
+            </a>
+            <ul class="nav-menu" style="gap: 0.5rem;">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="pages/systeme.html">Systeme</a></li>
+                <li><a href="pages/constitution.html">Constitution</a></li>
+                <li><a href="pages/programme.html">Programme</a></li>
+                <li><a href="pages/reformes.html">Reformes</a></li>
+                <li><a href="pages/equipe.html">Equipe</a></li>
+                <li><a href="pages/strategie.html">Strategie</a></li>
+                <li><a href="pages/faq.html">FAQ</a></li>
+            </ul>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <span style="font-size: 0.85rem; color: var(--humanisme); font-weight: 600;">VOTE: 31 DEC</span>
+                <a href="pages/equipe.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Rejoindre</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner + Stats Bar Integrated -->
+    <section class="banner banner-large" style="margin-top: 60px; min-height: 450px;">
+        <div style="position: relative; z-index: 1; width: 100%; max-width: 1800px; margin: 0 auto; padding: 3rem 40px;">
+            <div class="dashboard-grid">
+                <!-- Left Sidebar in Hero -->
+                <div style="color: white;">
+                    <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; backdrop-filter: blur(10px);">
+                        <h4 style="color: white; font-size: 0.9rem; margin-bottom: 1rem; opacity: 0.9;">CHIFFRES CLES</h4>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="opacity: 0.8;">Domaines</span>
+                                <span style="font-weight: 700;">12</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="opacity: 0.8;">Conseils</span>
+                                <span style="font-weight: 700;">10</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="opacity: 0.8;">Experts</span>
+                                <span style="font-weight: 700;">400</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="opacity: 0.8;">Budget</span>
+                                <span style="font-weight: 700;">38 Mds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Hero Content - 3 columns -->
+                <div style="grid-column: span 3; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                    <h1 style="font-size: 4.5rem; margin-bottom: 0.5rem; color: white;">ORDRE NATIONAL</h1>
+                    <div class="decorative-dots" style="margin: 1rem 0;">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <p style="font-size: 2.2rem; margin-bottom: 0.5rem; color: white;">Patriotisme + Laicisme + Humanisme</p>
+                    <p style="font-size: 1.4rem; opacity: 0.9; font-style: italic; color: white;">"La competence au pouvoir."</p>
+                    <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="pages/systeme.html" class="btn btn-secondary" style="font-size: 1rem; padding: 0.8rem 1.5rem;">Notre Systeme</a>
+                        <a href="pages/programme.html" class="btn" style="background: transparent; border: 2px solid white; color: white;">Programme 12 domaines</a>
+                        <a href="pages/constitution.html" class="btn" style="background: rgba(255,255,255,0.2); color: white;">Constitution modifiee</a>
+                        <a href="pages/reformes.html" class="btn" style="background: rgba(255,255,255,0.15); color: white;">Avant/Apres</a>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar in Hero -->
+                <div style="color: white;">
+                    <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; backdrop-filter: blur(10px);">
+                        <h4 style="color: white; font-size: 0.9rem; margin-bottom: 1rem; opacity: 0.9;">OBJECTIFS 5 ANS</h4>
+                        <div style="display: grid; gap: 0.75rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="opacity: 0.8;">Emplois</span>
+                                <span style="font-weight: 700; color: #4CAF50;">+400k</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="opacity: 0.8;">Criminalite</span>
+                                <span style="font-weight: 700; color: #4CAF50;">-40%</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="opacity: 0.8;">PISA maths</span>
+                                <span style="font-weight: 700; color: #4CAF50;">+100pts</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span style="opacity: 0.8;">Confiance</span>
+                                <span style="font-weight: 700; color: #4CAF50;">50%+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barre de stats - 6 colonnes -->
+    <section style="background: var(--bg-dark); color: white; padding: 1.25rem 0;">
+        <div class="container-full">
+            <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; max-width: 1200px; margin: 0 auto;">
+                <div class="stat-mini"><div class="num" style="color: var(--humanisme);">12</div><div class="label">Domaines</div></div>
+                <div class="stat-mini"><div class="num" style="color: #4CAF50;">10</div><div class="label">Conseils</div></div>
+                <div class="stat-mini"><div class="num" style="color: #2196F3;">400</div><div class="label">Experts</div></div>
+                <div class="stat-mini"><div class="num" style="color: #FF9800;">38Mds</div><div class="label">Budget</div></div>
+                <div class="stat-mini"><div class="num" style="color: #00BCD4;">577</div><div class="label">Deputes</div></div>
+                <div class="stat-mini"><div class="num" style="color: var(--humanisme); font-weight: 800;">31/12</div><div class="label">Vote IN</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section principale avec sidebars -->
+    <section class="section">
+        <div class="container-full">
+            <div class="layout-with-sidebars">
+                <!-- Sidebar Gauche -->
+                <aside>
+                    <div class="sidebar-widget">
+                        <h4>Navigation Rapide</h4>
+                        <div class="quick-links">
+                            <a href="pages/systeme.html">&#9654; Le Systeme</a>
+                            <a href="pages/constitution.html">&#9654; Constitution</a>
+                            <a href="pages/programme.html">&#9654; Programme</a>
+                            <a href="pages/reformes.html">&#9654; Reformes</a>
+                            <a href="pages/equipe.html">&#9654; Equipe</a>
+                            <a href="pages/strategie.html">&#9654; Strategie Discord</a>
+                            <a href="pages/faq.html">&#9654; FAQ</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h4>Nos Objectifs</h4>
+                        <div class="timeline-mini">
+                            <div class="timeline-mini-item">Faire connaitre nos idees</div>
+                            <div class="timeline-mini-item">Recruter des gens serieux</div>
+                            <div class="timeline-mini-item">Developper le mouvement</div>
+                            <div class="timeline-mini-item">Mettre la competence au pouvoir</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget" style="background: var(--patriotisme); color: white;">
+                        <h4 style="color: white; border-color: rgba(255,255,255,0.3);">Leader</h4>
+                        <div style="text-align: center;">
+                            <div style="width: 60px; height: 60px; background: rgba(255,255,255,0.2); border-radius: 50%; margin: 0 auto 0.5rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">S</div>
+                            <strong>Sitix</strong>
+                            <div style="font-size: 0.8rem; opacity: 0.8;">Fondateur</div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Contenu Principal -->
+                <main>
+                    <!-- Les 3 Valeurs - 3 colonnes -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="text-align: center; margin-bottom: 2rem;">Les 3 Valeurs Fondamentales</h2>
+                        <div class="grid-3" style="gap: 2rem;">
+                            <!-- Patriotisme -->
+                            <div class="card" style="border-top: 5px solid var(--patriotisme); background: linear-gradient(180deg, #e8f0f8 0%, white 30%);">
+                                <div class="card-body" style="text-align: center; padding: 2rem;">
+                                    <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: var(--patriotisme); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 4px 15px rgba(30, 58, 95, 0.3);">&#127467;&#127479;</div>
+                                    <h3 style="color: var(--patriotisme); font-size: 1.3rem; margin-bottom: 0.5rem;">PATRIOTISME</h3>
+                                    <p style="font-size: 1rem; font-weight: 600; color: var(--patriotisme); margin-bottom: 1rem;">"Donne-lui les meilleurs"</p>
+                                    <p style="font-size: 0.9rem; line-height: 1.5;">Nationalisme civique. Peu importe d'ou tu viens, si tu es competent et loyal envers la France, tu as ta place.</p>
+                                </div>
+                            </div>
+
+                            <!-- Laicisme -->
+                            <div class="card" style="border-top: 5px solid #6c757d; background: linear-gradient(180deg, #f5f5f5 0%, white 30%);">
+                                <div class="card-body" style="text-align: center; padding: 2rem;">
+                                    <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: #6c757d; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; color: white; box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);">&#9878;</div>
+                                    <h3 style="color: #6c757d; font-size: 1.3rem; margin-bottom: 0.5rem;">LAICISME</h3>
+                                    <p style="font-size: 1rem; font-weight: 600; color: #6c757d; margin-bottom: 1rem;">"Contre TOUS les dogmes"</p>
+                                    <p style="font-size: 0.9rem; line-height: 1.5;">Laicite ideologique. On decide selon ce qu'on sait, pas ce qu'on croit. Raison et expertise avant tout.</p>
+                                </div>
+                            </div>
+
+                            <!-- Humanisme -->
+                            <div class="card" style="border-top: 5px solid var(--humanisme); background: linear-gradient(180deg, #fef0f0 0%, white 30%);">
+                                <div class="card-body" style="text-align: center; padding: 2rem;">
+                                    <div style="width: 80px; height: 80px; margin: 0 auto 1rem; background: var(--humanisme); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);">&#128101;</div>
+                                    <h3 style="color: var(--humanisme); font-size: 1.3rem; margin-bottom: 0.5rem;">HUMANISME</h3>
+                                    <p style="font-size: 1rem; font-weight: 600; color: var(--humanisme); margin-bottom: 1rem;">"Au service de TOUS"</p>
+                                    <p style="font-size: 0.9rem; line-height: 1.5;">Gouvernance efficace et bienveillante. L'objectif final : que chaque Francais vive mieux.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Constat + Solution cote a cote -->
+                    <div class="grid-2" style="gap: 2rem; margin-bottom: 3rem;">
+                        <!-- Constat -->
+                        <div>
+                            <span class="badge badge-humanisme" style="margin-bottom: 1rem;">CONSTAT</span>
+                            <h3>40 ans de declin</h3>
+                            <p style="margin-bottom: 1rem;">Sous TOUS les gouvernements - gauche, droite, centre.</p>
+                            <div class="hex-col" style="gap: 0.75rem;">
+                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">-20pts</div><div style="font-size: 0.75rem;">PISA</div></div>
+                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">+15%</div><div style="font-size: 0.75rem;">Crimes</div></div>
+                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">110%</div><div style="font-size: 0.75rem;">Dette/PIB</div></div>
+                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">-40%</div><div style="font-size: 0.75rem;">Industrie</div></div>
+                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">1.68</div><div style="font-size: 0.75rem;">Natalite</div></div>
+                                <div class="mini-card"><div style="font-size: 1.3rem; font-weight: 700; color: #f44336;">23%</div><div style="font-size: 0.75rem;">Confiance</div></div>
+                            </div>
+                            <div class="card" style="background: var(--patriotisme); color: white; margin-top: 1.5rem;">
+                                <div class="card-body" style="padding: 1rem;">
+                                    <strong>Diagnostic :</strong> On elit des gens populaires au lieu de gens competents.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Solution -->
+                        <div>
+                            <span class="badge badge-success" style="margin-bottom: 1rem;">SOLUTION</span>
+                            <h3>Republique Meritocratique</h3>
+                            <p style="margin-bottom: 1rem;">Legitimite democratique + Expertise technique.</p>
+                            <div class="hex-col" style="gap: 0.75rem;">
+                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">10</div><div style="font-size: 0.75rem;">Conseils</div></div>
+                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">400</div><div style="font-size: 0.75rem;">Experts</div></div>
+                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">KPIs</div><div style="font-size: 0.75rem;">Mesures</div></div>
+                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">30j</div><div style="font-size: 0.75rem;">Examen</div></div>
+                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">577</div><div style="font-size: 0.75rem;">Deputes</div></div>
+                                <div class="mini-card" style="border-left: 3px solid #4CAF50;"><div style="font-size: 1.3rem; font-weight: 700; color: #4CAF50;">Vote</div><div style="font-size: 0.75rem;">Final</div></div>
+                            </div>
+                            <div class="card" style="background: #4CAF50; color: white; margin-top: 1.5rem;">
+                                <div class="card-body" style="padding: 1rem;">
+                                    <strong>Resultat :</strong> Competence + Legitimite = Efficacite
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10 Conseils Sectoriels -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="text-align: center; margin-bottom: 1.5rem;">Les 10 Conseils Sectoriels</h2>
+                        <p style="text-align: center; margin-bottom: 2rem; color: var(--text-muted);">40 experts par conseil = 400 experts valident chaque loi</p>
+                        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem;">
+                            <div class="mini-card text-center">
+                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #2c3e50; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#128737;</div>
+                                <strong style="font-size: 0.9rem;">Securite</strong>
+                            </div>
+                            <div class="mini-card text-center">
+                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #27ae60; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#128176;</div>
+                                <strong style="font-size: 0.9rem;">Economie</strong>
+                            </div>
+                            <div class="mini-card text-center">
+                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #e74c3c; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127973;</div>
+                                <strong style="font-size: 0.9rem;">Sante</strong>
+                            </div>
+                            <div class="mini-card text-center">
+                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127891;</div>
+                                <strong style="font-size: 0.9rem;">Education</strong>
+                            </div>
+                            <div class="mini-card text-center">
+                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #9b59b6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127961;</div>
+                                <strong style="font-size: 0.9rem;">Urbanisme</strong>
+                            </div>
+                            <div class="mini-card text-center">
+                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #16a085; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127807;</div>
+                                <strong style="font-size: 0.9rem;">Environnement</strong>
+                            </div>
+                            <div class="mini-card text-center">
+                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #f39c12; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127806;</div>
+                                <strong style="font-size: 0.9rem;">Agriculture</strong>
+                            </div>
+                            <div class="mini-card text-center">
+                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #1abc9c; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#128187;</div>
+                                <strong style="font-size: 0.9rem;">Numerique</strong>
+                            </div>
+                            <div class="mini-card text-center">
+                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #e67e22; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127908;</div>
+                                <strong style="font-size: 0.9rem;">Culture</strong>
+                            </div>
+                            <div class="mini-card text-center">
+                                <div style="width: 50px; height: 50px; margin: 0 auto 0.5rem; background: #34495e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem;">&#127760;</div>
+                                <strong style="font-size: 0.9rem;">Etrangeres</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 12 Domaines Programme -->
+                    <div style="margin-bottom: 3rem;">
+                        <h2 style="text-align: center; margin-bottom: 1.5rem;">12 Domaines de Programme</h2>
+                        <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.75rem;">
+                            <a href="pages/programme.html#securite" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128737;</div><strong style="font-size: 0.8rem;">Securite</strong></a>
+                            <a href="pages/programme.html#justice" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#9878;</div><strong style="font-size: 0.8rem;">Justice</strong></a>
+                            <a href="pages/programme.html#immigration" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128274;</div><strong style="font-size: 0.8rem;">Immigration</strong></a>
+                            <a href="pages/programme.html#economie" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128176;</div><strong style="font-size: 0.8rem;">Economie</strong></a>
+                            <a href="pages/programme.html#sante" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127973;</div><strong style="font-size: 0.8rem;">Sante</strong></a>
+                            <a href="pages/programme.html#education" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127891;</div><strong style="font-size: 0.8rem;">Education</strong></a>
+                            <a href="pages/programme.html#logement" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127968;</div><strong style="font-size: 0.8rem;">Logement</strong></a>
+                            <a href="pages/programme.html#transports" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128646;</div><strong style="font-size: 0.8rem;">Transports</strong></a>
+                            <a href="pages/programme.html#services" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127970;</div><strong style="font-size: 0.8rem;">Services</strong></a>
+                            <a href="pages/programme.html#ecologie" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127807;</div><strong style="font-size: 0.8rem;">Ecologie</strong></a>
+                            <a href="pages/programme.html#defense" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#127988;</div><strong style="font-size: 0.8rem;">Defense</strong></a>
+                            <a href="pages/programme.html#medias" class="icon-card" style="padding: 1rem;"><div style="font-size: 1.5rem; margin-bottom: 0.25rem;">&#128240;</div><strong style="font-size: 0.8rem;">Medias</strong></a>
+                        </div>
+                    </div>
+
+                    <!-- Argument Massue -->
+                    <div class="card" style="background: linear-gradient(135deg, #1a1a2e 0%, var(--patriotisme) 100%); color: white; margin-bottom: 3rem;">
+                        <div class="card-body" style="padding: 2rem; text-align: center;">
+                            <h3 style="color: white; margin-bottom: 1rem;">L'Argument Massue</h3>
+                            <div class="grid-3" style="gap: 2rem; align-items: center;">
+                                <div>
+                                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">&#129658;</div>
+                                    <p>"Etre opere par un chirurgien elu par vote populaire ?"</p>
+                                </div>
+                                <div style="font-size: 2rem;">&#10132;</div>
+                                <div>
+                                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">&#127467;&#127479;</div>
+                                    <p>Pourquoi confier votre pays a des politiciens au lieu d'experts ?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Sidebar Droite -->
+                <aside>
+                    <div class="sidebar-widget">
+                        <h4>Documents Cles</h4>
+                        <div class="quick-links">
+                            <a href="pages/constitution.html"><strong style="color: var(--patriotisme);">Constitution</strong> - Comparaison</a>
+                            <a href="pages/reformes.html"><strong style="color: #4CAF50;">Reformes</strong> - Avant/Apres</a>
+                            <a href="pages/programme.html"><strong style="color: #FF9800;">Programme</strong> - 12 domaines</a>
+                            <a href="pages/faq.html"><strong style="color: #9C27B0;">FAQ</strong> - Objections</a>
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h4>Postes a Pourvoir</h4>
+                        <div style="font-size: 0.85rem;">
+                            <div style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                                <strong>Vice-President</strong>
+                                <span class="badge badge-warning" style="float: right; font-size: 0.7rem;">Urgent</span>
+                            </div>
+                            <div style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                                <strong>Porte-Parole</strong>
+                            </div>
+                            <div style="padding: 0.5rem 0;">
+                                <strong>Tresorier</strong>
+                            </div>
+                        </div>
+                        <a href="pages/equipe.html" class="btn btn-outline" style="width: 100%; margin-top: 1rem; padding: 0.5rem;">Voir l'equipe</a>
+                    </div>
+                    <div class="sidebar-widget" style="background: var(--humanisme); color: white;">
+                        <h4 style="color: white; border-color: rgba(255,255,255,0.3);">Rejoindre</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Tu veux contribuer ? Contacte-nous.</p>
+                        <a href="pages/strategie.html" class="btn" style="width: 100%; background: rgba(255,255,255,0.2); color: white; padding: 0.5rem;">En savoir plus</a>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h4>Contact</h4>
+                        <div style="font-size: 0.85rem;">
+                            <p><strong>Leader:</strong> @Sitix</p>
+                            <p style="margin-top: 0.5rem; color: var(--text-muted);">Mouvement en construction</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Full Width -->
+    <section class="banner" style="background: linear-gradient(135deg, var(--patriotisme) 0%, var(--humanisme) 100%); min-height: 250px;">
+        <div class="banner-content" style="max-width: 1400px;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Rejoins le mouvement</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 1.5rem;">
+                Tu aimes la France ? Tu crois a la raison ? Tu veux que ca marche pour tous ?
+            </p>
+            <p style="font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem;">On a besoin de gens serieux.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="pages/equipe.html" class="btn btn-secondary" style="font-size: 1rem; padding: 0.8rem 1.5rem;">Voir l'equipe</a>
+                <a href="pages/faq.html" class="btn" style="background: rgba(255,255,255,0.2); color: white; font-size: 1rem; padding: 0.8rem 1.5rem;">Lire la FAQ</a>
+                <a href="pages/strategie.html" class="btn" style="background: rgba(255,255,255,0.15); color: white; font-size: 1rem; padding: 0.8rem 1.5rem;">Strategie Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Full Width -->
+    <footer class="footer">
+        <div class="container-full">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">ORDRE NATIONAL</h4>
+                    <p style="opacity: 0.7; margin-bottom: 1rem;">La competence au pouvoir.</p>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <span class="badge badge-patriotisme">Patriotisme</span>
+                        <span class="badge" style="background: white; color: var(--text-primary);">Laicite</span>
+                        <span class="badge badge-humanisme">Humanisme</span>
+                    </div>
+                </div>
+                <div>
+                    <h4>Fondamentaux</h4>
+                    <ul style="list-style: none; font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.4rem;"><a href="pages/systeme.html" style="color: rgba(255,255,255,0.7);">Systeme</a></li>
+                        <li style="margin-bottom: 0.4rem;"><a href="pages/constitution.html" style="color: rgba(255,255,255,0.7);">Constitution</a></li>
+                        <li style="margin-bottom: 0.4rem;"><a href="pages/programme.html" style="color: rgba(255,255,255,0.7);">Programme</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Reformes</h4>
+                    <ul style="list-style: none; font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.4rem;"><a href="pages/reformes.html" style="color: rgba(255,255,255,0.7);">Avant/Apres</a></li>
+                        <li style="margin-bottom: 0.4rem;"><a href="pages/reformes.html#gouvernance" style="color: rgba(255,255,255,0.7);">Gouvernance</a></li>
+                        <li style="margin-bottom: 0.4rem;"><a href="pages/reformes.html#securite" style="color: rgba(255,255,255,0.7);">Securite</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Organisation</h4>
+                    <ul style="list-style: none; font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.4rem;"><a href="pages/equipe.html" style="color: rgba(255,255,255,0.7);">Equipe</a></li>
+                        <li style="margin-bottom: 0.4rem;"><a href="pages/strategie.html" style="color: rgba(255,255,255,0.7);">Strategie</a></li>
+                        <li style="margin-bottom: 0.4rem;"><a href="pages/faq.html" style="color: rgba(255,255,255,0.7);">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul style="list-style: none; font-size: 0.9rem;">
+                        <li style="margin-bottom: 0.4rem; opacity: 0.7;">Leader: @Sitix</li>
+                        <li style="margin-bottom: 0.4rem; opacity: 0.7;">Mouvement en construction</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Rejoindre</h4>
+                    <a href="pages/strategie.html" class="btn" style="background: var(--humanisme); color: white; padding: 0.75rem 1.5rem; display: inline-block;">
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+            <div class="decorative-line" style="background: rgba(255,255,255,0.2);"></div>
+            <div style="text-align: center; padding-top: 1rem;">
+                <p>ORDRE NATIONAL - Patriotisme. Laicite. Humanisme. - "La competence au pouvoir."</p>
+                <p style="margin-top: 0.5rem; opacity: 0.5; font-size: 0.85rem;">Document interne - Version 3.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

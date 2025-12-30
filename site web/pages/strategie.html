@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejoindre le Mouvement - ORDRE NATIONAL</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .strategie-header {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            color: white;
+            padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+        }
+
+        .vision-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .vision-header {
+            padding: var(--spacing-xl);
+            color: white;
+            text-align: center;
+        }
+
+        .vision-header h2 {
+            color: white;
+            margin: 0;
+        }
+
+        .vision-body {
+            padding: var(--spacing-xl);
+        }
+
+        .rejoindre-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .rejoindre-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            border-top: 4px solid var(--patriotisme);
+        }
+
+        .rejoindre-card h3 {
+            color: var(--patriotisme);
+        }
+
+        .valeur-box {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            padding: var(--spacing-lg);
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .valeur-icon {
+            font-size: 2.5rem;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--patriotisme), var(--humanisme));
+            color: white;
+            padding: var(--spacing-xxl);
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            margin: var(--spacing-xxl) 0;
+        }
+
+        .cta-box h2 {
+            color: white;
+        }
+
+        .profil-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .profil-card {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .profil-icon {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-md);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-brand">
+                <span style="font-size: 1.5rem;">&#127467;&#127479;</span>
+                <span>ORDRE NATIONAL</span>
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="systeme.html">Notre Systeme</a></li>
+                <li><a href="constitution.html">Constitution</a></li>
+                <li><a href="programme.html">Programme</a></li>
+                <li><a href="reformes.html">Reformes</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li><a href="strategie.html" class="active">Rejoindre</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="strategie-header">
+        <div class="container">
+            <h1>Rejoindre le Mouvement</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Tu crois en la competence ? Tu veux que la France fonctionne ? Rejoins-nous.</p>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <!-- Notre Vision -->
+            <section style="margin-bottom: var(--spacing-xxl);">
+                <div class="section-title">
+                    <h2>Notre Vision</h2>
+                    <p>Ce que nous defendons</p>
+                </div>
+
+                <div class="valeur-box">
+                    <div class="valeur-icon" style="background: var(--patriotisme); color: white;">&#127467;&#127479;</div>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem; color: var(--patriotisme);">PATRIOTISME</h3>
+                        <p style="margin: 0;">La France merite les meilleurs. Peu importe d'ou tu viens, si tu es competent et loyal, tu as ta place.</p>
+                    </div>
+                </div>
+
+                <div class="valeur-box">
+                    <div class="valeur-icon" style="background: #6c757d; color: white;">&#9878;</div>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem; color: #6c757d;">LAICISME</h3>
+                        <p style="margin: 0;">On decide selon ce qu'on sait, pas ce qu'on croit. Raison et expertise avant les dogmes.</p>
+                    </div>
+                </div>
+
+                <div class="valeur-box">
+                    <div class="valeur-icon" style="background: var(--humanisme); color: white;">&#128101;</div>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem; color: var(--humanisme);">HUMANISME</h3>
+                        <p style="margin: 0;">Au service de TOUS les Francais. L'objectif : une gouvernance efficace et bienveillante.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pourquoi nous rejoindre -->
+            <section style="margin-bottom: var(--spacing-xxl);">
+                <div class="section-title">
+                    <h2>Pourquoi nous rejoindre ?</h2>
+                </div>
+
+                <div class="rejoindre-grid">
+                    <div class="rejoindre-card">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">&#128161;</div>
+                        <h3>Des idees qui marchent</h3>
+                        <p>Notre programme est base sur ce qui fonctionne, pas sur l'ideologie. Experts + democratie = efficacite.</p>
+                    </div>
+
+                    <div class="rejoindre-card">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">&#128170;</div>
+                        <h3>Une equipe serieuse</h3>
+                        <p>Pas de beaux parleurs. Des gens qui veulent que ca marche et qui s'organisent pour y arriver.</p>
+                    </div>
+
+                    <div class="rejoindre-card">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">&#127919;</div>
+                        <h3>Un objectif clair</h3>
+                        <p>Mettre la competence au pouvoir. Faire en sorte que les decisions soient prises par ceux qui savent.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profils recherches -->
+            <section style="margin-bottom: var(--spacing-xxl);">
+                <div class="section-title">
+                    <h2>Profils recherches</h2>
+                    <p>On cherche des gens serieux, pas des militants professionnels</p>
+                </div>
+
+                <div class="profil-grid">
+                    <div class="profil-card">
+                        <div class="profil-icon">&#128187;</div>
+                        <h4>Experts techniques</h4>
+                        <p>Ingenieurs, scientifiques, professionnels avec expertise reelle</p>
+                    </div>
+
+                    <div class="profil-card">
+                        <div class="profil-icon">&#128172;</div>
+                        <h4>Communicants</h4>
+                        <p>Savoir expliquer nos idees simplement et convaincre</p>
+                    </div>
+
+                    <div class="profil-card">
+                        <div class="profil-icon">&#128203;</div>
+                        <h4>Organisateurs</h4>
+                        <p>Structurer, planifier, coordonner les actions</p>
+                    </div>
+
+                    <div class="profil-card">
+                        <div class="profil-icon">&#127891;</div>
+                        <h4>Analystes</h4>
+                        <p>Recherche, redaction, preparation des dossiers</p>
+                    </div>
+
+                    <div class="profil-card">
+                        <div class="profil-icon">&#128101;</div>
+                        <h4>Recruteurs</h4>
+                        <p>Identifier et attirer des talents pour le mouvement</p>
+                    </div>
+
+                    <div class="profil-card">
+                        <div class="profil-icon">&#127912;</div>
+                        <h4>Creatifs</h4>
+                        <p>Design, video, contenu visuel impactant</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <div class="cta-box">
+                <h2>Pret a nous rejoindre ?</h2>
+                <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 1.5rem;">
+                    Tu partages nos valeurs ? Tu veux contribuer a quelque chose de serieux ?
+                </p>
+                <p style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem;">
+                    Contacte @Sitix
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="equipe.html" class="btn btn-secondary">Voir l'equipe actuelle</a>
+                    <a href="faq.html" class="btn" style="background: rgba(255,255,255,0.2); color: white;">Lire la FAQ</a>
+                </div>
+            </div>
+
+            <!-- Ce qu'on attend -->
+            <section>
+                <div class="section-title">
+                    <h2>Ce qu'on attend de toi</h2>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card" style="border-left: 4px solid #4CAF50;">
+                        <div class="card-body">
+                            <h4 style="color: #4CAF50;">&#10004; Ce qu'on veut</h4>
+                            <ul>
+                                <li>Serieux et fiabilite</li>
+                                <li>Capacite a argumenter rationnellement</li>
+                                <li>Disponibilite minimum</li>
+                                <li>Discretion sur les discussions internes</li>
+                                <li>Loyaute envers le mouvement</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" style="border-left: 4px solid #f44336;">
+                        <div class="card-body">
+                            <h4 style="color: #f44336;">&#10060; Ce qu'on ne veut PAS</h4>
+                            <ul>
+                                <li>Militants ideologiques rigides</li>
+                                <li>Chercheurs de poste sans contribution</li>
+                                <li>Personnes non fiables</li>
+                                <li>Trolls ou provocateurs</li>
+                                <li>Gens qui ne respectent pas la confidentialite</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>ORDRE NATIONAL - Patriotisme. Laicite. Humanisme.</p>
+                <p style="margin-top: var(--spacing-sm);">"La competence au pouvoir."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme - ORDRE NATIONAL</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .programme-header {
+            background: linear-gradient(135deg, var(--humanisme) 0%, #8b1528 100%);
+            color: white;
+            padding: calc(80px + var(--spacing-xl)) 0 var(--spacing-xl);
+        }
+
+        .domaine-full {
+            margin-bottom: var(--spacing-xxl);
+            scroll-margin-top: 100px;
+        }
+
+        .domaine-title {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+            color: white;
+        }
+
+        .domaine-title h2 {
+            color: white;
+            margin: 0;
+        }
+
+        .domaine-icon {
+            font-size: 3rem;
+        }
+
+        .domaine-content {
+            background: white;
+            padding: var(--spacing-xl);
+            border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .probleme-list {
+            background: #ffebee;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .probleme-list h4 {
+            color: #c62828;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .principes-list {
+            background: #e3f2fd;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .principes-list h4 {
+            color: #1565c0;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .mesures-table {
+            width: 100%;
+            margin-top: var(--spacing-lg);
+        }
+
+        .mesures-table th {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .budget-box {
+            background: var(--bg-secondary);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            margin-top: var(--spacing-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+        }
+
+        .budget-amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--patriotisme);
+        }
+
+        .quick-nav {
+            position: sticky;
+            top: 70px;
+            background: white;
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            z-index: 100;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .quick-nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            list-style: none;
+        }
+
+        .quick-nav-list a {
+            display: block;
+            padding: var(--spacing-xs) var(--spacing-md);
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            font-size: 0.85rem;
+            transition: all var(--transition-fast);
+        }
+
+        .quick-nav-list a:hover {
+            background: var(--patriotisme);
+            color: white;
+        }
+
+        /* Couleurs des domaines */
+        .domaine-securite .domaine-title { background: #2c3e50; }
+        .domaine-justice .domaine-title { background: #8e44ad; }
+        .domaine-immigration .domaine-title { background: #27ae60; }
+        .domaine-economie .domaine-title { background: #f39c12; }
+        .domaine-sante .domaine-title { background: #e74c3c; }
+        .domaine-education .domaine-title { background: #3498db; }
+        .domaine-logement .domaine-title { background: #1abc9c; }
+        .domaine-transports .domaine-title { background: #9b59b6; }
+        .domaine-services .domaine-title { background: #34495e; }
+        .domaine-ecologie .domaine-title { background: #27ae60; }
+        .domaine-defense .domaine-title { background: #2c3e50; }
+        .domaine-medias .domaine-title { background: #e67e22; }
+
+        @media (max-width: 768px) {
+            .quick-nav {
+                position: relative;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-brand">
+                <span style="font-size: 1.5rem;">🇫🇷</span>
+                <span>ORDRE NATIONAL</span>
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="systeme.html">Notre Systeme</a></li>
+                <li><a href="constitution.html">Constitution</a></li>
+                <li><a href="programme.html" class="active">Programme</a></li>
+                <li><a href="reformes.html">Reformes</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li><a href="strategie.html">Strategie</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header avec emplacement image -->
+    <header class="programme-header" style="position: relative; min-height: 300px; display: flex; align-items: center;">
+        <!-- Emplacement banniere -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(196,30,58,0.95) 0%, rgba(139,21,40,0.9) 100%); z-index: 1;">
+            <!-- FUTURE: Ajouter image de fond ici -->
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <div style="font-size: 5rem;">&#128203;</div>
+                <div>
+                    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Programme Complet</h1>
+                    <p style="font-size: 1.3rem; opacity: 0.9; margin-bottom: 0.5rem;">12 domaines - Mesures concretes - Indicateurs mesurables</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">&#128176; 38 Mds budget</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">&#128200; Objectifs chiffres</span>
+                        <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem;">&#9201; 5 ans</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <!-- Navigation rapide -->
+            <nav class="quick-nav">
+                <ul class="quick-nav-list">
+                    <li><a href="#securite">🛡️ Sécurité</a></li>
+                    <li><a href="#justice">⚖️ Justice</a></li>
+                    <li><a href="#immigration">👥 Immigration</a></li>
+                    <li><a href="#economie">💼 Économie</a></li>
+                    <li><a href="#sante">🏥 Santé</a></li>
+                    <li><a href="#education">🎓 Éducation</a></li>
+                    <li><a href="#logement">🏠 Logement</a></li>
+                    <li><a href="#transports">🚄 Transports</a></li>
+                    <li><a href="#services">🏛️ Services</a></li>
+                    <li><a href="#ecologie">🌱 Écologie</a></li>
+                    <li><a href="#defense">⚔️ Défense</a></li>
+                    <li><a href="#medias">📺 Médias</a></li>
+                </ul>
+            </nav>
+
+            <!-- DOMAINE 1: SÉCURITÉ -->
+            <article id="securite" class="domaine-full domaine-securite">
+                <div class="domaine-title">
+                    <span class="domaine-icon">🛡️</span>
+                    <div>
+                        <h2>1. Sécurité & Ordre</h2>
+                        <p style="margin: 0; opacity: 0.8;">La loi s'applique. Partout, pour tous.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <div class="probleme-list">
+                        <h4>❌ Le Problème</h4>
+                        <ul>
+                            <li>Violence urbaine en hausse constante</li>
+                            <li>Police démotivée et sous-équipée</li>
+                            <li>Quartiers hors de contrôle</li>
+                            <li>Transports publics dangereux</li>
+                        </ul>
+                    </div>
+
+                    <div class="principes-list">
+                        <h4>✓ Nos Principes</h4>
+                        <ol>
+                            <li><strong>La loi s'applique</strong> : Partout, pour tous</li>
+                            <li><strong>Police respectée</strong> : Moyens, salaires, protection</li>
+                            <li><strong>Prévention ET répression</strong> : Les deux sont nécessaires</li>
+                            <li><strong>Surveillance intelligente</strong> : Technologie au service de la sécurité</li>
+                        </ol>
+                    </div>
+
+                    <h4>Mesures Concrètes</h4>
+                    <table class="mesures-table">
+                        <thead>
+                            <tr>
+                                <th>Mesure</th>
+                                <th>Implémentation</th>
+                                <th>Indicateur de succès</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Police renforcée</strong></td>
+                                <td>+10 000 agents, salaire +25%</td>
+                                <td>Temps réponse < 15 min</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Équipement moderne</strong></td>
+                                <td>Matériel 2024+, véhicules neufs</td>
+                                <td>Taux équipement 100%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Surveillance urbaine</strong></td>
+                                <td>500k caméras IA, reconnaissance</td>
+                                <td>Taux élucidation +30%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plan anti-drogue</strong></td>
+                                <td>Démantèlement réseaux, prévention</td>
+                                <td>Points de deal -50%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Police des transports</strong></td>
+                                <td>Effectifs doublés + équipement</td>
+                                <td>Agressions transports -60%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="budget-box">
+                        <div>
+                            <strong>Budget</strong>
+                            <span class="budget-amount">+8 Mds€/an</span>
+                        </div>
+                        <div>
+                            <strong>Financement</strong>
+                            <span>Taxes immigration, réallocation</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- DOMAINE 2: JUSTICE -->
+            <article id="justice" class="domaine-full domaine-justice">
+                <div class="domaine-title">
+                    <span class="domaine-icon">⚖️</span>
+                    <div>
+                        <h2>2. Justice & Pénitentiaire</h2>
+                        <p style="margin: 0; opacity: 0.8;">Rapide, ferme, mais juste.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <div class="probleme-list">
+                        <h4>❌ Le Problème</h4>
+                        <ul>
+                            <li>Justice lente (procédures = années)</li>
+                            <li>Prisons surpeuplées et inefficaces</li>
+                            <li>Récidive massive (60%)</li>
+                            <li>Mineurs délinquants impunis</li>
+                        </ul>
+                    </div>
+
+                    <div class="principes-list">
+                        <h4>✓ Nos Principes</h4>
+                        <ol>
+                            <li><strong>Justice rapide</strong> : 6 mois max pour un jugement</li>
+                            <li><strong>Peines justes</strong> : Proportionnées mais fermes</li>
+                            <li><strong>Récidive pénalisée</strong> : Chaque récidive aggrave</li>
+                            <li><strong>Mineurs responsables</strong> : Fin de l'excuse de minorité pour crimes graves</li>
+                        </ol>
+                    </div>
+
+                    <h4>Mesures Concrètes</h4>
+                    <table class="mesures-table">
+                        <thead>
+                            <tr>
+                                <th>Mesure</th>
+                                <th>Implémentation</th>
+                                <th>Indicateur de succès</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Justice accélérée</strong></td>
+                                <td>3 niveaux au lieu de 5, délais stricts</td>
+                                <td>Délai moyen < 6 mois</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Peines plancher</strong></td>
+                                <td>Minimum obligatoire par catégorie</td>
+                                <td>Application uniforme</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Construction prisons</strong></td>
+                                <td>15 000 places supplémentaires</td>
+                                <td>Surpopulation 0%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fin excuse minorité 16+</strong></td>
+                                <td>Crimes graves = majeur</td>
+                                <td>Responsabilisation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Inéligibilité corruption</strong></td>
+                                <td>À vie pour corruption prouvée</td>
+                                <td>Exemplarité</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="budget-box">
+                        <div>
+                            <strong>Budget</strong>
+                            <span class="budget-amount">+4 Mds€/an</span>
+                        </div>
+                        <div>
+                            <strong>Financement</strong>
+                            <span>Économies système pénal</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- DOMAINE 3: IMMIGRATION -->
+            <article id="immigration" class="domaine-full domaine-immigration">
+                <div class="domaine-title">
+                    <span class="domaine-icon">👥</span>
+                    <div>
+                        <h2>3. Immigration & Intégration</h2>
+                        <p style="margin: 0; opacity: 0.8;">Choisie, maîtrisée, intégrée.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <div class="probleme-list">
+                        <h4>❌ Le Problème</h4>
+                        <ul>
+                            <li>Immigration incontrôlée</li>
+                            <li>OQTF non exécutées (90% non appliquées)</li>
+                            <li>Intégration échouée</li>
+                            <li>Communautarisme croissant</li>
+                        </ul>
+                    </div>
+
+                    <h4>Mesures Concrètes</h4>
+                    <table class="mesures-table">
+                        <thead>
+                            <tr>
+                                <th>Mesure</th>
+                                <th>Implémentation</th>
+                                <th>Indicateur de succès</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Quota annuel</strong></td>
+                                <td>200k/an max, critères compétences</td>
+                                <td>Flux maîtrisé</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Test intégration</strong></td>
+                                <td>Langue B1 + valeurs républicaines</td>
+                                <td>85% réussite</td>
+                            </tr>
+                            <tr>
+                                <td><strong>OQTF exécution 30 jours</strong></td>
+                                <td>Délai strict, pas de report</td>
+                                <td>95% exécutées</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Centres de rétention x2</strong></td>
+                                <td>Doublement capacité</td>
+                                <td>Aucune libération faute de place</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="budget-box">
+                        <div>
+                            <strong>Budget</strong>
+                            <span class="budget-amount">+2 Mds€/an</span>
+                        </div>
+                        <div>
+                            <strong>Financement</strong>
+                            <span>Économies prestations, taxes visas</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- DOMAINE 4: ÉCONOMIE -->
+            <article id="economie" class="domaine-full domaine-economie">
+                <div class="domaine-title">
+                    <span class="domaine-icon">💼</span>
+                    <div>
+                        <h2>4. Économie & Travail</h2>
+                        <p style="margin: 0; opacity: 0.8;">Libérer les créateurs, taxer les rentes.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <h4>Mesures Concrètes</h4>
+                    <table class="mesures-table">
+                        <thead>
+                            <tr>
+                                <th>Mesure</th>
+                                <th>Implémentation</th>
+                                <th>Indicateur de succès</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Déréglementation</strong></td>
+                                <td>Suppression 80% normes inutiles</td>
+                                <td>Création entreprise = 1 jour</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Charges -50%</strong></td>
+                                <td>Réduction charges patronales</td>
+                                <td>Emploi +400k/an</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PME prioritaires</strong></td>
+                                <td>Crédit garanti, fiscalité réduite</td>
+                                <td>PME = 60% PIB</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Taxe GAFAM</strong></td>
+                                <td>Sur chiffre d'affaires France</td>
+                                <td>+3 Mds€/an</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lutte fraude sociale</strong></td>
+                                <td>Croisement fichiers automatique</td>
+                                <td>Fraude -50%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="budget-box">
+                        <div>
+                            <strong>Budget</strong>
+                            <span class="budget-amount">+5 Mds€/an</span>
+                        </div>
+                        <div>
+                            <strong>Financement</strong>
+                            <span>Taxe GAFAM, anti-fraude</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Continuer avec les autres domaines de manière plus concise -->
+
+            <!-- DOMAINES 5-12 (version condensée) -->
+            <article id="sante" class="domaine-full domaine-sante">
+                <div class="domaine-title">
+                    <span class="domaine-icon">🏥</span>
+                    <div>
+                        <h2>5. Santé & Bien-être</h2>
+                        <p style="margin: 0; opacity: 0.8;">Médecins qui décident. Déserts éliminés.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <div class="grid-2">
+                        <div>
+                            <h4>Mesures clés</h4>
+                            <ul>
+                                <li>Médecins autonomes (Conseil Santé conseille)</li>
+                                <li>Obligation installation 5 ans en zone sous-dotée</li>
+                                <li>Production médicaments France (80% indépendance)</li>
+                                <li>10 séances psy/an gratuites</li>
+                            </ul>
+                        </div>
+                        <div class="budget-box" style="flex-direction: column; text-align: center;">
+                            <span class="budget-amount">+5 Mds€/an</span>
+                            <small>Taxes sucre/tabac, relocalisation</small>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="education" class="domaine-full domaine-education">
+                <div class="domaine-title">
+                    <span class="domaine-icon">🎓</span>
+                    <div>
+                        <h2>6. Éducation & Jeunesse</h2>
+                        <p style="margin: 0; opacity: 0.8;">Mérite scolaire. Profs respectés.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <div class="grid-2">
+                        <div>
+                            <h4>Mesures clés</h4>
+                            <ul>
+                                <li>Filières dès 14 ans (Académique/Technique/Pratique)</li>
+                                <li>Salaire profs +50%</li>
+                                <li>Uniforme scolaire obligatoire</li>
+                                <li>Service national 12 mois</li>
+                            </ul>
+                        </div>
+                        <div class="budget-box" style="flex-direction: column; text-align: center;">
+                            <span class="budget-amount">+3 Mds€/an</span>
+                            <small>Taxe formation entreprises</small>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="logement" class="domaine-full domaine-logement">
+                <div class="domaine-title">
+                    <span class="domaine-icon">🏠</span>
+                    <div>
+                        <h2>7. Logement</h2>
+                        <p style="margin: 0; opacity: 0.8;">Propriété sacrée. Squatteurs expulsés 48h.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <div class="grid-2">
+                        <div>
+                            <h4>Mesures clés</h4>
+                            <ul>
+                                <li>Expulsion squatteurs 48h</li>
+                                <li>PTZ élargi primo-accédants</li>
+                                <li>500k logements/an construits</li>
+                                <li>Régulation AirBnB (120 jours/an max)</li>
+                            </ul>
+                        </div>
+                        <div class="budget-box" style="flex-direction: column; text-align: center;">
+                            <span class="budget-amount">+3 Mds€/an</span>
+                            <small>Taxes AirBnB, résidences secondaires</small>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="transports" class="domaine-full domaine-transports">
+                <div class="domaine-title">
+                    <span class="domaine-icon">🚄</span>
+                    <div>
+                        <h2>8. Transports & Mobilité</h2>
+                        <p style="margin: 0; opacity: 0.8;">Service minimum. Lignes rurales.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <div class="grid-2">
+                        <div>
+                            <h4>Mesures clés</h4>
+                            <ul>
+                                <li>Service minimum SNCF/RATP 50%</li>
+                                <li>50 lignes rurales réouvertes</li>
+                                <li>Gel taxes carburants si > 1.80€/L</li>
+                                <li>200k bornes électriques en 5 ans</li>
+                            </ul>
+                        </div>
+                        <div class="budget-box" style="flex-direction: column; text-align: center;">
+                            <span class="budget-amount">+2 Mds€/an</span>
+                            <small>Restructuration SNCF, péages</small>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="services" class="domaine-full domaine-services">
+                <div class="domaine-title">
+                    <span class="domaine-icon">🏛️</span>
+                    <div>
+                        <h2>9. Services Publics</h2>
+                        <p style="margin: 0; opacity: 0.8;">État réduit mais présent.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <div class="grid-2">
+                        <div>
+                            <h4>Mesures clés</h4>
+                            <ul>
+                                <li>Maisons France Services chaque canton</li>
+                                <li>Simplification : 1 400 → 200 formulaires</li>
+                                <li>Fonctionnaires +15% terrain</li>
+                                <li>"Dites-le nous une fois" (interconnexion fichiers)</li>
+                            </ul>
+                        </div>
+                        <div class="budget-box" style="flex-direction: column; text-align: center;">
+                            <span class="budget-amount">+1 Mds€/an</span>
+                            <small>Économies bureaucratie (-4 Mds€ net)</small>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="ecologie" class="domaine-full domaine-ecologie">
+                <div class="domaine-title">
+                    <span class="domaine-icon">🌱</span>
+                    <div>
+                        <h2>10. Écologie Pragmatique</h2>
+                        <p style="margin: 0; opacity: 0.8;">Nucléaire + Pas d'écologie punitive.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <div class="grid-2">
+                        <div>
+                            <h4>Mesures clés</h4>
+                            <ul>
+                                <li>8 nouveaux EPR nucléaires</li>
+                                <li>Report interdiction thermique 2035 → 2045</li>
+                                <li>1 milliard d'arbres en 10 ans</li>
+                                <li>Taxe carbone frontière</li>
+                            </ul>
+                        </div>
+                        <div class="budget-box" style="flex-direction: column; text-align: center;">
+                            <span class="budget-amount">+3 Mds€/an</span>
+                            <small>Export électrique, taxe carbone</small>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="defense" class="domaine-full domaine-defense">
+                <div class="domaine-title">
+                    <span class="domaine-icon">⚔️</span>
+                    <div>
+                        <h2>11. Défense & Souveraineté</h2>
+                        <p style="margin: 0; opacity: 0.8;">Réarmement. Service national.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <div class="grid-2">
+                        <div>
+                            <h4>Mesures clés</h4>
+                            <ul>
+                                <li>Budget 3% PIB</li>
+                                <li>Industrie défense nationale prioritaire</li>
+                                <li>Renseignement unifié (fusion DGSE/DGSI)</li>
+                                <li>Service militaire 6 mois 18-25 ans</li>
+                            </ul>
+                        </div>
+                        <div class="budget-box" style="flex-direction: column; text-align: center;">
+                            <span class="budget-amount">+5 Mds€/an</span>
+                            <small>Réallocation prioritaire</small>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="medias" class="domaine-full domaine-medias">
+                <div class="domaine-title">
+                    <span class="domaine-icon">📺</span>
+                    <div>
+                        <h2>12. Médias & Information</h2>
+                        <p style="margin: 0; opacity: 0.8;">Pluralisme. Transparence. Fact-checking.</p>
+                    </div>
+                </div>
+                <div class="domaine-content">
+                    <div class="grid-2">
+                        <div>
+                            <h4>Mesures clés</h4>
+                            <ul>
+                                <li>Plafond concentration 30% parts de marché</li>
+                                <li>Transparence propriété en temps réel</li>
+                                <li>Agence nationale fact-checking</li>
+                                <li>Éducation médias obligatoire à l'école</li>
+                            </ul>
+                        </div>
+                        <div class="budget-box" style="flex-direction: column; text-align: center;">
+                            <span class="budget-amount">+1 Mds€/an</span>
+                            <small>Taxe pub numérique GAFAM</small>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Récapitulatif Budget -->
+            <section class="section-alt" style="padding: var(--spacing-xl); border-radius: var(--border-radius-lg); margin-top: var(--spacing-xxl);">
+                <h2 class="text-center">Récapitulatif Budgétaire</h2>
+                <div class="table-container" style="margin-top: var(--spacing-xl);">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Domaine</th>
+                                <th>Dépense</th>
+                                <th>Financement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Sécurité</td><td>+8 Mds€</td><td>Taxes immigration, réallocation</td></tr>
+                            <tr><td>Justice</td><td>+4 Mds€</td><td>Économies système pénal</td></tr>
+                            <tr><td>Immigration</td><td>+2 Mds€</td><td>Économies prestations</td></tr>
+                            <tr><td>Économie</td><td>+5 Mds€</td><td>Taxe GAFAM, anti-fraude</td></tr>
+                            <tr><td>Santé</td><td>+5 Mds€</td><td>Taxes sucre/tabac</td></tr>
+                            <tr><td>Éducation</td><td>+3 Mds€</td><td>Taxe formation</td></tr>
+                            <tr><td>Logement</td><td>+3 Mds€</td><td>Taxes AirBnB</td></tr>
+                            <tr><td>Transports</td><td>+2 Mds€</td><td>Restructuration SNCF</td></tr>
+                            <tr><td>Services publics</td><td>+1 Mds€</td><td>Économies bureaucratie</td></tr>
+                            <tr><td>Écologie</td><td>+3 Mds€</td><td>Export électrique</td></tr>
+                            <tr><td>Défense</td><td>+5 Mds€</td><td>Réallocation</td></tr>
+                            <tr><td>Médias</td><td>+1 Mds€</td><td>Taxe pub numérique</td></tr>
+                            <tr><td>Administration</td><td>-4 Mds€</td><td>Économies directes</td></tr>
+                            <tr style="background: var(--patriotisme); color: white;">
+                                <td><strong>TOTAL</strong></td>
+                                <td><strong>+38 Mds€</strong></td>
+                                <td><strong>~38 Mds€</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-center" style="margin-top: var(--spacing-lg);">
+                    <strong>Objectif : Neutralité budgétaire par réorganisation intelligente</strong>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>ORDRE NATIONAL - Patriotisme. Laïcité. Humanisme.</p>
+                <p style="margin-top: var(--spacing-sm);">"La compétence au pouvoir."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
